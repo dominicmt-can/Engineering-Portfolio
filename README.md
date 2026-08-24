@@ -9,8 +9,8 @@ A collection of independent engineering builds spanning embedded systems, mechan
 A single-axis radar scanner built from an ultrasonic rangefinder mounted on a hobby servo, integrating embedded firmware, noise filtering, and a live desktop GUI.
 
 <p align="center">
-  <img src="images/sonar_gui.png" alt="Processing Radar GUI" width="48%" />
-  <img src="images/sonar_rig.png" alt="Assembled Hardware Rig" width="48%" />
+  <img src="images/SonarSweepImage.png" alt="Processing Radar GUI" width="48%" />
+  <img src="images/ServoSonarSetup.jpg" alt="Assembled Hardware Rig" width="48%" />
 </p>
 
 * **Telemetry & Real-Time Visualization:** Designed a custom serial protocol streaming synchronized angle/distance pairs over USB to a Processing GUI rendering a live radar scope.
@@ -29,8 +29,8 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 A single-stage epicyclic gear reduction modeled in SolidWorks, pre-validated in MATLAB, and fabricated via FDM 3D printing.
 
 <p align="center">
-  <img src="images/gearbox_assembled.png" alt="Planetary Gearbox Assembly" width="48%" />
-  <img src="images/gearbox_matlab_plot.png" alt="MATLAB Mesh Profile Validation" width="48%" />
+  <img src="images/AssembledGear.png" alt="Planetary Gearbox Assembly" width="48%" />
+  <img src="images/DisassembledGear.png" alt="Disassembled Gear Components" width="48%" />
 </p>
 
 * **Epicyclic Architecture:** Single-stage reduction utilizing a sun gear, 3 planet gears at 120° spacing, a 3-pin carrier, and a stationary ring gear that serves as the outer housing.
