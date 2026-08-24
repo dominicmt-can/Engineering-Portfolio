@@ -8,10 +8,9 @@ A collection of independent engineering builds spanning embedded systems, mechan
 
 A single-axis radar scanner built from an ultrasonic rangefinder mounted on a hobby servo, integrating embedded firmware, noise filtering, and a live desktop GUI.
 
-<p align="center">
-  <img src="images/SonarSweepImage.png" alt="Processing Radar GUI" width="48%" />
-  <img src="images/ServoSonarSetup.jpg" alt="Assembled Hardware Rig" width="48%" />
-</p>
+| Real-Time Processing Radar GUI | Assembled Hardware Setup |
+| :---: | :---: |
+| <img src="images/SonarSweepImage.png" height="240" /> | <img src="images/ServoSonarSetup.jpg" height="240" /> |
 
 * **Telemetry & Real-Time Visualization:** Designed a custom serial protocol streaming synchronized angle/distance pairs over USB to a Processing GUI rendering a live radar scope.
 * **Non-Blocking Control Loop:** Built control firmware in Arduino C/C++ using `millis()` timing to maintain a smooth, non-blocking 180° sweep with ~25 ms step intervals.
@@ -28,10 +27,9 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 A single-stage epicyclic gear reduction modeled in SolidWorks, pre-validated in MATLAB, and fabricated via FDM 3D printing.
 
-<p align="center">
-  <img src="images/AssembledGear.png" alt="Planetary Gearbox Assembly" width="48%" />
-  <img src="images/DisassembledGear.png" alt="Disassembled Gear Components" width="48%" />
-</p>
+| Assembled Planetary Stage | Disassembled CAD & 3D-Printed Parts |
+| :---: | :---: |
+| <img src="images/AssembledGear.png" height="240" /> | <img src="images/DisassembledGear.png" height="240" /> |
 
 * **Epicyclic Architecture:** Single-stage reduction utilizing a sun gear, 3 planet gears at 120° spacing, a 3-pin carrier, and a stationary ring gear that serves as the outer housing.
 * **Numerical Mesh Validation:** Scripted kinematic checks to verify concentricity (Nr = Ns + 2*Np), equispaced carrier symmetry ((Ns + Nr)/P is an integer), and transverse contact ratio (ε ≥ 1.2).
