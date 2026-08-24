@@ -27,7 +27,7 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 A single-stage epicyclic gear reduction modeled in SolidWorks, pre-validated in MATLAB, and fabricated via FDM 3D printing.
 
-| Assembled Planetary Stage | Disassembled CAD & 3D-Printed Parts |
+| Assembled Planetary Stage | Disassembled 3D-Printed Parts |
 | :---: | :---: |
 | <img src="images/AssembledGear.png" height="240" /> | <img src="images/DisassembledGear.png" height="240" /> |
 
