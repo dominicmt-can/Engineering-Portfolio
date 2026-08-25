@@ -81,7 +81,7 @@ Data is streamed over USB Serial at **9600 baud** in a comma-delimited ASCII str
 To eliminate environmental multipath interference and high-frequency acoustic discretization noise, raw echo readings are processed through an onboard 3-sample median filter ($r_1, r_2, r_3$) executed in integer arithmetic.
 
 <p align="center">
-  <img src="docs/images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
+  <img src="images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
 </p>
 
 ### Empirical Performance Metrics
@@ -128,9 +128,6 @@ To eliminate environmental multipath interference and high-frequency acoustic di
 
 ---
 
-Here is the entire snippet in a single plain-text code block so the one-click copy button grabs all of it:
-
-```
 ## Directory Structure
 
 * **Sonar-Sweep/**
