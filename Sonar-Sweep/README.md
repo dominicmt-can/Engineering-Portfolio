@@ -118,13 +118,6 @@ if (currentTime - lastMoveTime >= sweepSpeed) {
   Serial.print(filteredDistance);
   Serial.print("."); 
   
-  // Calculate the next angle position step state for the next timer cycle
-  pos += stepDirection;
-  if (pos >= 180) {
-    stepDirection = -1; // Reverse direction when hitting maximum limit
-  } else if (pos <= 0) {
-    stepDirection = 1;  // Reverse direction when hitting minimum limit
-  }
 }
 ```
 
