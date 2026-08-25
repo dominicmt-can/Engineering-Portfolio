@@ -35,9 +35,13 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 A single-stage epicyclic gear reduction modeled in SolidWorks, pre-validated in MATLAB, and fabricated via FDM 3D printing.
 
+<div align="center">
+
 | Assembled Planetary Stage | Disassembled 3D-Printed Parts |
 | :---: | :---: |
 | <img src="images/AssembledGear.png" height="240" /> | <img src="images/DisassembledGear.png" height="240" /> |
+
+</div>
 
 * **Epicyclic Architecture:** Single-stage reduction utilizing a sun gear, 3 planet gears at 120° spacing, a 3-pin carrier, and a stationary ring gear that serves as the outer housing.
 * **Numerical Mesh Validation:** Scripted kinematic checks to verify concentricity (Nr = Ns + 2*Np), equispaced carrier symmetry ((Ns + Nr)/P is an integer), and transverse contact ratio (ε ≥ 1.2).
