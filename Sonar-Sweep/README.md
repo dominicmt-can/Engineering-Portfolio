@@ -28,19 +28,23 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 ---
 
-## System Architecture
+## Hardware & Bill of Materials (BOM)
 
-```text
-[ HC-SR04 Sensor ] ---> [ Arduino Mega 2560 ] ---> [ Serial / USB ] ---> [ Processing GUI ]
-  10 µs Trigger Pulse      Non-blocking Sweep         "angle,distance."       Real-Time Radar
-  Echo Timing Capture      3-Sample Median Filter     9600 Baud Stream        Scope Visualizer
-```
+* **Microcontroller:** 1x Arduino Mega 2560 (or standard Uno)
+* **Sensor:** 1x HC-SR04 Ultrasonic Distance Sensor
+* **Actuator:** 1x SG90 9g Micro Servo (180° sweep range)
+* **Passive Components:** 1x Capacitor (across 5V/GND power rail)
+* **Prototyping & Wiring:** 
+  * 1x Solderless Breadboard
+  * Assorted Jumper Wires (Male-to-Male and Male-to-Female)
+  * 1x USB 2.0 Cable (Power & Serial Telemetry)
+* **Mounting & Structure:** Custom 3D-Printed Sensor Bracket (Generic Black PLA, printed on Bambu Lab A1 Mini)
 
 ### Hardware Interconnect & Breadboard Distribution
 
 | Device / Module | Pin / Signal | Connection Target | Functional Purpose |
 | :--- | :--- | :--- | :--- |
-| **Power Distribution** | Arduino 5V | Breadboard (+) Rail | Main $5\text{V}$ DC power bus |
+| **Power Distribution** | Arduino 5V | Breadboard (+) Rail | Main 5V DC power bus |
 | | Arduino GND | Breadboard (-) Rail | System common logic ground |
 | **HC-SR04 Sonar** | VCC | Breadboard (+) Rail | Transducer power supply |
 | | GND | Breadboard (-) Rail | Transducer ground return |
@@ -49,6 +53,26 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 | **Micro Servo** | Power (Red) | Breadboard (+) Rail | Actuator power supply |
 | | Ground (Brown) | Breadboard (-) Rail | Actuator ground return |
 | | PWM (Orange) | Arduino Pin 9 | 50 Hz PWM angle command |
+
+---
+
+## System Architecture & Serial Protocol
+
+```text
+[ HC-SR04 Sensor ] ---> [ Arduino Mega 2560 ] ---> [ Serial / USB ] ---> [ Processing GUI ]
+  10 µs Trigger Pulse      Non-blocking Sweep         "angle,distance."       Real-Time Radar
+  Echo Timing Capture      3-Sample Median Filter     9600 Baud Stream        Scope Visualizer
+```
+
+Data is streamed over USB Serial at **9600 baud** in a comma-delimited ASCII string terminated with a period:
+
+```text
+<angle_degrees>,<distance_cm>.
+```
+
+* **Angle Range:** `0` to `180` (Degrees)
+* **Tracking Distance Range:** `2` to `40` (Centimeters)
+* **Example Payload:** `45,28.` (Beam at 45°, target detected at 28 cm)
 
 ---
 
@@ -72,17 +96,19 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 ---
 
-## Serial Protocol Definition
+## Quick Start Guide
 
-Data is streamed over USB Serial at **9600 baud** in a comma-delimited ASCII string terminated with a period:
+1. **Hardware Setup:** Wire the Arduino Mega, HC-SR04, and Micro Servo according to the pin mapping table. Ensure the breadboard power rails are supplied with 5V.
+2. **Flash Firmware:** Open `sonar_sweep.ino` in the Arduino IDE. Install the standard `<Servo.h>` library if not already present. Select the Arduino Mega 2560 board and upload.
+3. **Launch GUI:** Open `radar_scope.pde` in Processing (Java mode). The script automatically binds to the first available COM port (`Serial.list()[0]`). Run the sketch to begin live telemetry visualization.
 
-```text
-<angle_degrees>,<distance_cm>.
-```
+---
 
-* **Angle Range:** `0` to `180` (Degrees)
-* **Tracking Distance Range:** `2` to `40` (Centimeters)
-* **Example Payload:** `45,28.` (Beam at 45°, target detected at 28 cm)
+## Future Improvements
+
+* **Slip-Ring Integration:** Transition from a 180° oscillating servo to a continuous 360° slip-ring motor for uninterrupted panoramic scanning.
+* **Point-Cloud Mapping:** Upgrade the Processing GUI to log persistent data points, creating a 2D room map rather than a decaying radar trail.
+* **Lidar Upgrade:** Replace the acoustic HC-SR04 with a VL53L0X Time-of-Flight (ToF) laser sensor to eliminate multipath acoustic reflections and improve angular resolution.
 
 ---
 
@@ -96,4 +122,5 @@ Sonar-Sweep/
 └── CAD/
     ├── sonar_bracket.STEP  # Universal CAD model
     └── sonar_bracket.STL   # Interactive 3D preview & 3D print file
+```── sonar_bracket.STL   # Interactive 3D preview & 3D print file
 ```
