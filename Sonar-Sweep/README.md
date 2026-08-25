@@ -28,12 +28,17 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
   Echo Timing Capture      3-Sample Median Filter     9600 Baud Stream        Scope Visualizer
 ```
 
-### Hardware Interconnect & Interactive Circuit Simulation
+### Hardware Interconnect & Pin Mapping
 
-[![Open Live Simulation](../images/sonar_circuit.png)](https://www.tinkercad.com/things/ci6sYHYNCPM/editel?sharecode=Mb80CZUdHlv4nTB8BI8_rFWFz9_N7CsV32ycm_klOFM)
-
-> **[▶ Click to Launch Interactive Circuit Simulation](https://www.tinkercad.com/things/ci6sYHYNCPM/editel?sharecode=Mb80CZUdHlv4nTB8BI8_rFWFz9_N7CsV32ycm_klOFM)**  
-> *Opens the active breadboard circuit in Tinkercad to run code and test sweep behavior directly in your browser.*
+| Component | Component Pin | Arduino Mega 2560 Pin | Function / Logic |
+| :--- | :--- | :--- | :--- |
+| **HC-SR04 Sonar** | VCC | 5V | 5V Power Rail |
+| | GND | GND | Common Logic Ground |
+| | Trig | Pin 6 | 10 µs Trigger Pulse Output |
+| | Echo | Pin 7 | Return Timing Capture Input |
+| **Micro Servo** | VCC / Red | 5V | 5V Actuator Power |
+| | GND / Brown | GND | Common Logic Ground |
+| | PWM / Orange | Pin 9 | 50 Hz PWM Angle Command |
 
 ---
 
@@ -78,6 +83,6 @@ Sonar-Sweep/
 ├── README.md           # Technical documentation
 ├── sonar_sweep.ino     # Arduino Mega C/C++ firmware
 ├── radar_scope.pde     # Processing Java GUI visualizer
-└── CAD_and_Circuits/
+└── CAD/
     └── sonar_bracket.STEP  # 3D-printable transducer mount CAD
 ```
