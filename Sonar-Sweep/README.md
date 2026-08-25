@@ -6,9 +6,13 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
   <img src="../images/sonar_demo.gif" alt="Live Sonar Sweep Demo" width="80%" />
 </p>
 
+<div align="center">
+
 | Live Scope GUI Display | Assembled Microcontroller Rig |
 | :---: | :---: |
 | <img src="../images/Servo_Print_and_Stand.png" height="230" /> | <img src="../images/ServoSonarSetup.jpg" height="230" /> |
+
+</div>
 
 ---
 
