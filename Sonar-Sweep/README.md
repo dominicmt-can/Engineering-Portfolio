@@ -8,7 +8,7 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 <div align="center">
 
-| Live Scope GUI Display | Assembled Microcontroller Rig |
+| Sonar and Custom Servo Attachment | Assembled Microcontroller Rig |
 | :---: | :---: |
 | <img src="../images/Servo_Print_and_Stand.png" height="260" /> | <img src="../images/ServoSonarSetup.jpg" height="260" /> |
 
@@ -76,15 +76,31 @@ Data is streamed over USB Serial at **9600 baud** in a comma-delimited ASCII str
 
 ---
 
+## Signal Processing & Telemetry Validation
+
+To eliminate environmental multipath interference and high-frequency acoustic discretization noise, raw echo readings are processed through an onboard 3-sample median filter ($r_1, r_2, r_3$) executed in integer arithmetic.
+
+<p align="center">
+  <img src="docs/images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
+</p>
+
+### Empirical Performance Metrics
+* **Single-Sample Glitch Suppression:** Strips severe transient acoustic multipath reflections (e.g., rejecting an instantaneous $+20\text{ cm}$ spike at $154^\circ$) without causing trajectory corruption.
+* **Baseline Jitter Elimination:** Flattens persistent $\pm 1\text{ cm}$ discretization ripple into stable planar boundaries across continuous targets ($35^\circ \text{--} 70^\circ$).
+* **Step-Edge Fidelity:** Accurately tracks sharp obstacle profile transitions ($87\text{ cm} \rightarrow 43\text{ cm}$) with single-frame response latency.
+* **Telemetry & Benchmarks:** Raw test data and analytical workbooks are archived in [`/arduino/tests/`](./arduino/tests/).
+
+---
+
 ## Key Engineering Challenges & Solutions
 
 ### 1. Non-Blocking Timing Architecture
 * **Problem:** Standard `delay()`-based control loops halted CPU execution during sensor reads and servo steps, causing jittery motion and dropped GUI frames.
 * **Solution:** Refactored the control loop around `millis()` non-blocking timing, maintaining a smooth 180° sweep with a consistent 25 ms step interval.
 
-### 2. Signal Processing & Glitch Rejection
-* **Problem:** Acoustic multipath reflections and sensor echo dropouts periodically injected zero or out-of-bounds readings into the telemetry stream.
-* **Solution:** Embedded an onboard 3-sample median filter (`r1`, `r2`, `r3`) into the firmware before data packet serialization, rejecting outliers before transmission to the GUI.
+### 2. Serial Synchronization & Framing Protocol
+* **Problem:** Continuous serial streams risk frame desynchronization and partial payload reads on the receiver when baud rates drift or buffers overflow.
+* **Solution:** Designed a lightweight, fixed-delimiter ASCII serialization protocol (`<angle>,<distance>.`) that allows the Processing client to cleanly parse frames with zero buffer overrun or trailing-byte lockups.
 
 ### 3. Power Integrity & Noise Decoupling
 * **Problem:** The hobby servo injected electrical switching noise into the shared 5V VCC power rail during step transitions, intermittently corrupting HC-SR04 timing accuracy.
@@ -112,15 +128,21 @@ Data is streamed over USB Serial at **9600 baud** in a comma-delimited ASCII str
 
 ---
 
+Here is the entire snippet in a single plain-text code block so the one-click copy button grabs all of it:
+
+```
 ## Directory Structure
 
-```text
-Sonar-Sweep/
-├── README.md           # Technical documentation
-├── sonar_sweep.ino     # Arduino Mega C/C++ firmware
-├── radar_scope.pde     # Processing Java GUI visualizer
-└── CAD/
-    ├── sonar_bracket.STEP  # Universal CAD model
-    └── sonar_bracket.STL   # Interactive 3D preview & 3D print file
-```── sonar_bracket.STL   # Interactive 3D preview & 3D print file
+* **Sonar-Sweep/**
+  * `README.md` — Technical documentation
+  * [`sonar_sweep.ino`](./sonar_sweep.ino) — Main embedded firmware with 3-median filter and non-blocking scheduling.
+  * [`radar_scope.pde`](./radar_scope.pde) — Processing GUI script for serial decoding and dynamic polar rendering.
+  * **CAD/**
+    * [`sonar_bracket.STEP`](./CAD/sonar_bracket.STEP) — Universal STEP assembly model of the sensor mounting bracket.
+    * [`sonar_bracket.STL`](./CAD/sonar_bracket.STL) — Slicer-ready stereolithography 3D print file.
+  * **tests/**
+    * [`filter_test.ino`](./tests/filter_test.ino) — Telemetry test benchmark firmware.
+    * [`raw_telemetry.csv`](./tests/raw_telemetry.csv) — 150-point recorded hardware sweep dataset.
+    * [`filter_analysis.xlsx`](./tests/filter_analysis.xlsx) — Excel workbook containing raw series and comparative chart.
+
 ```
