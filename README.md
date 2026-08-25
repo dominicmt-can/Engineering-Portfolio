@@ -16,7 +16,7 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 | Real-Time Processing Radar GUI | Assembled Hardware Setup |
 | :---: | :---: |
-| <img src="images/SonarSweepImage.png" height="230" /> | <img src="images/Servo_Print_and_Stand.jpg" height="230" /> |
+| <img src="images/ServoSonarSetup.jpg" height="260" /> | <img src="images/Servo_Print_and_Stand.png" height="260" /> |
 
 </div>
 
