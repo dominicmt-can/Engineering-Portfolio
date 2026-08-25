@@ -6,6 +6,10 @@ A collection of independent engineering builds spanning embedded systems, mechan
 
 ## 1. Sonar Sweep — Ultrasonic Radar Scanner
 
+<p align="center">
+  <img src="images/sonar_demo.gif" alt="Live Sonar Sweep Demo" width="80%" />
+</p>
+
 A single-axis radar scanner built from an ultrasonic rangefinder mounted on a hobby servo, integrating embedded firmware, noise filtering, and a live desktop GUI.
 
 | Real-Time Processing Radar GUI | Assembled Hardware Setup |
