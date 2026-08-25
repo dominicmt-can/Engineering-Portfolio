@@ -14,7 +14,7 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 | Real-Time Processing Radar GUI | Assembled Hardware Setup |
 | :---: | :---: |
-| <img src="../images/Servo_Print_and_Stand.png" height="230" /> | <img src="images/ServoSonarSetup.jpg" height="240" /> |
+| <img src="images/Servo_Print_and_Stand.png" height="230" /> | <img src="images/ServoSonarSetup.jpg" height="240" /> |
 
 * **Telemetry & Real-Time Visualization:** Designed a custom serial protocol streaming synchronized angle/distance pairs over USB to a Processing GUI rendering a live radar scope.
 * **Non-Blocking Control Loop:** Built control firmware in Arduino C/C++ using `millis()` timing to maintain a smooth, non-blocking 180° sweep with ~25 ms step intervals.
