@@ -10,7 +10,7 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 | Live Scope GUI Display | Assembled Microcontroller Rig |
 | :---: | :---: |
-| <img src="../images/Servo_Print_and_Stand.png" height="230" /> | <img src="../images/ServoSonarSetup.jpg" height="230" /> |
+| <img src="../images/Servo_Print_and_Stand.png" height="260" /> | <img src="../images/ServoSonarSetup.jpg" height="260" /> |
 
 </div>
 
