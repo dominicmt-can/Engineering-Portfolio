@@ -8,6 +8,10 @@ A collection of independent engineering builds spanning embedded systems, mechan
 
 A single-axis radar scanner built from an ultrasonic rangefinder mounted on a hobby servo, integrating embedded firmware, noise filtering, and a live desktop GUI.
 
+<p align="center">
+  <img src="images/sonar_demo.gif" alt="Live Sonar Sweep Demo" width="80%" />
+</p>
+
 <div align="center">
 
 | Sonar and Custom Servo Attachment | Assembled Hardware Setup |
@@ -17,9 +21,6 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 </div>
 
 * **Telemetry & Real-Time Visualization:** Designed a custom serial protocol streaming synchronized angle/distance pairs over USB to a Processing GUI rendering a live radar scope.
-   <p align="center">
-      <img src="images/sonar_demo.gif" alt="Live Sonar Sweep Demo" width="80%" />
-   </p>
 
 * **Non-Blocking Control Loop:** Built control firmware in Arduino C/C++ using `millis()` timing to maintain a smooth, non-blocking 180° sweep with ~25 ms step intervals.
 * **Signal Processing:** Implemented an onboard 3-sample median filter in firmware to reject ultrasonic echo dropouts and noise before transmission.
