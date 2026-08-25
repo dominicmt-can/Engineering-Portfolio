@@ -20,7 +20,7 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 </div>
 
-* **Telemetry & Real-Time Visualization:** Designed a custom serial protocol streaming synchronized angle/distance pairs over USB to a Processing GUI rendering a live radar scope.
+* **Telemetry & Real-Time Visualization:** Designed a custom serial protocol, streaming synchronized angle/distance pairs over USB to a Processing GUI rendering a live radar scope.
 
 * **Non-Blocking Control Loop:** Built control firmware in Arduino C/C++ using `millis()` timing to maintain a smooth, non-blocking 180° sweep with ~25 ms step intervals.
 * **Hardware Debugging & Power Integrity:** Resolved power-integrity issues caused by servo PWM injecting noise into the shared 5V sensor power rail.
