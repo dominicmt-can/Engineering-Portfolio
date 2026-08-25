@@ -2,6 +2,10 @@
 
 A single-axis scanning radar system that pairs an ultrasonic rangefinder with a continuous servo sweep to stream real-time spatial mapping data over USB to a custom desktop GUI.
 
+<p align="center">
+  <img src="../images/sonar_demo.gif" alt="Live Sonar Sweep Demo" width="80%" />
+</p>
+
 | Live Scope GUI Display | Assembled Microcontroller Rig |
 | :---: | :---: |
 | <img src="../images/SonarSweepImage.png" height="230" /> | <img src="../images/ServoSonarSetup.jpg" height="230" /> |
@@ -28,17 +32,19 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
   Echo Timing Capture      3-Sample Median Filter     9600 Baud Stream        Scope Visualizer
 ```
 
-### Hardware Interconnect & Pin Mapping
+### Hardware Interconnect & Breadboard Distribution
 
-| Component | Component Pin | Arduino Mega 2560 Pin | Function / Logic |
+| Device / Module | Pin / Signal | Connection Target | Functional Purpose |
 | :--- | :--- | :--- | :--- |
-| **HC-SR04 Sonar** | VCC | 5V | 5V Power Rail |
-| | GND | GND | Common Logic Ground |
-| | Trig | Pin 6 | 10 µs Trigger Pulse Output |
-| | Echo | Pin 7 | Return Timing Capture Input |
-| **Micro Servo** | VCC / Red | 5V | 5V Actuator Power |
-| | GND / Brown | GND | Common Logic Ground |
-| | PWM / Orange | Pin 9 | 50 Hz PWM Angle Command |
+| **Power Distribution** | Arduino 5V | Breadboard (+) Rail | Main $5\text{V}$ DC power bus |
+| | Arduino GND | Breadboard (-) Rail | System common logic ground |
+| **HC-SR04 Sonar** | VCC | Breadboard (+) Rail | Transducer power supply |
+| | GND | Breadboard (-) Rail | Transducer ground return |
+| | Trig | Arduino Pin 6 | 10 µs trigger pulse output |
+| | Echo | Arduino Pin 7 | Return timing capture input |
+| **Micro Servo** | Power (Red) | Breadboard (+) Rail | Actuator power supply |
+| | Ground (Brown) | Breadboard (-) Rail | Actuator ground return |
+| | PWM (Orange) | Arduino Pin 9 | 50 Hz PWM angle command |
 
 ---
 
@@ -84,5 +90,6 @@ Sonar-Sweep/
 ├── sonar_sweep.ino     # Arduino Mega C/C++ firmware
 ├── radar_scope.pde     # Processing Java GUI visualizer
 └── CAD/
-    └── sonar_bracket.STEP  # 3D-printable transducer mount CAD
+    ├── sonar_bracket.STEP  # Universal CAD model
+    └── sonar_bracket.STL   # Interactive 3D preview & 3D print file
 ```
