@@ -14,7 +14,7 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 <div align="center">
 
-| Sonar and Custom Servo Attachment | Assembled Hardware Setup |
+| Assembled Hardware Setup | Sonar and Custom Servo Attachment |
 | :---: | :---: |
 | <img src="images/ServoSonarSetup.jpg" height="260" /> | <img src="images/Servo_Print_and_Stand.png" height="260" /> |
 
@@ -24,12 +24,12 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 * **Non-Blocking Control Loop:** Built control firmware in Arduino C/C++ using `millis()` timing to maintain a smooth, non-blocking 180° sweep with ~25 ms step intervals.
 * **Signal Processing:** Implemented an onboard 3-sample median filter in firmware to reject ultrasonic echo dropouts and noise before transmission.
-    <p align="center">
-      <img src="images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
-    </p>
-
 * **Hardware Debugging & Power Integrity:** Resolved power-integrity issues caused by servo PWM injecting noise into the shared 5V sensor power rail.
 * **Mechanical Design & Prototyping:** Modeled and 3D-printed a custom SolidWorks sensor mount to center the transducer directly over the servo rotation axis, correcting mapping errors.
+
+<p align="center">
+  <img src="images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
+</p>
 
 **Tools:** Arduino (C/C++), Processing (Java), SolidWorks, 3D Printing, Hardware Debugging  
 **Files:** [`Sonar-Sweep/`](./Sonar-Sweep/)
