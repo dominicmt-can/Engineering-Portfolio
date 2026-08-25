@@ -102,6 +102,32 @@ To eliminate environmental multipath interference and high-frequency acoustic di
 * **Problem:** Continuous serial streams risk frame desynchronization and partial payload reads on the receiver when baud rates drift or buffers overflow.
 * **Solution:** Designed a lightweight, fixed-delimiter ASCII serialization protocol (`<angle>,<distance>.`) that allows the Processing client to cleanly parse frames with zero buffer overrun or trailing-byte lockups.
 
+**Core Firmware Implementation (Timing & Serial Framing):**
+```cpp
+unsigned long currentTime = millis(); // Acts as a running stopwatch
+
+// Non-Blocking Timer: Executes every 25ms without pausing the processor
+if (currentTime - lastMoveTime >= sweepSpeed) {
+  lastMoveTime = currentTime;
+
+  /* ... [Hardware actuation and sensor read logic abstracted] ... */
+
+  // Transmit packed ASCII telemetry string (<angle>,<distance>.)
+  Serial.print(pos);
+  Serial.print(",");
+  Serial.print(filteredDistance);
+  Serial.print("."); 
+  
+  // Calculate the next angle position step state for the next timer cycle
+  pos += stepDirection;
+  if (pos >= 180) {
+    stepDirection = -1; // Reverse direction when hitting maximum limit
+  } else if (pos <= 0) {
+    stepDirection = 1;  // Reverse direction when hitting minimum limit
+  }
+}
+```
+
 ### 3. Power Integrity & Noise Decoupling
 * **Problem:** The hobby servo injected electrical switching noise into the shared 5V VCC power rail during step transitions, intermittently corrupting HC-SR04 timing accuracy.
 * **Solution:** Decoupled the sensor power rail with filtering capacitors and isolated high-current servo transients from the microcontroller logic bus.
