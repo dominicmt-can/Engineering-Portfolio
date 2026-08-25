@@ -88,7 +88,7 @@ To eliminate environmental multipath interference and high-frequency acoustic di
 * **Single-Sample Glitch Suppression:** Strips severe transient acoustic multipath reflections (e.g., rejecting an instantaneous $+20\text{ cm}$ spike at $154^\circ$) without causing trajectory corruption.
 * **Baseline Jitter Elimination:** Flattens persistent $\pm 1\text{ cm}$ discretization ripple into stable planar boundaries across continuous targets ($35^\circ \text{--} 70^\circ$).
 * **Step-Edge Fidelity:** Accurately tracks sharp obstacle profile transitions ($87\text{ cm} \rightarrow 43\text{ cm}$) with single-frame response latency.
-* **Telemetry & Benchmarks:** Raw test data and analytical workbooks are archived in [`/arduino/tests/`](./arduino/tests/).
+* **Telemetry & Benchmarks:** Raw test data and analytical workbooks are archived in [`/tests/`](./tests/).
 
 ---
 
