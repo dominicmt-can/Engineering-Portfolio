@@ -8,9 +8,9 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 <div align="center">
 
-| Sonar and Custom Servo Attachment | Assembled Microcontroller Rig |
-| :---: | :---: |
-| <img src="../images/Servo_Print_and_Stand.png" height="260" /> | <img src="../images/ServoSonarSetup.jpg" height="260" /> |
+| Sonar and Custom Servo Attachment | Assembled Microcontroller Rig | CAD Assembly |
+| :---: | :---: | :---: |
+| <img src="../images/Servo_Print_and_Stand.png" height="260" /> | <img src="../images/ServoSonarSetup.jpg" height="260" /> | <img src="../images/Isometric_Assembly.png" height ="260" /> |
 
 </div>
 
