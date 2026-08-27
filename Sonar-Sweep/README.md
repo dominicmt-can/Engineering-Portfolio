@@ -42,6 +42,16 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 ### Hardware Interconnect & Breadboard Distribution
 
+<div align="center">
+
+| Circuit layout |
+| :---: |
+| <img src="../images/Circuit_Schematic.png" height ="260" /> |
+
+</div>
+
+> **Schematic Source Files:** Complete KiCad project, symbol tables, and schematic sheets available in [`circuits/`](./circuits/).
+
 | Device / Module | Pin / Signal | Connection Target | Functional Purpose |
 | :--- | :--- | :--- | :--- |
 | **Power Distribution** | Arduino 5V | Breadboard (+) Rail | Main 5V DC power bus |
