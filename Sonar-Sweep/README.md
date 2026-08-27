@@ -2,6 +2,8 @@
 
 A single-axis scanning radar system that pairs an ultrasonic rangefinder with a continuous servo sweep to stream real-time spatial mapping data over USB to a custom desktop GUI.
 
+Project Motivation: Created as an independent initiative to apply manufacturing and mechatronics principles to a complete build. This project demonstrates end-to-end product development, combining custom SolidWorks CAD, robust power delivery, and non-blocking embedded C++ firmware to reliably capture and visualize spatial telemetry.
+
 <br>
 
 <p align="center">
@@ -37,7 +39,7 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 * **Microcontroller:** 1x Arduino Mega 2560 (or standard Uno)
 * **Sensor:** 1x HC-SR04 Ultrasonic Distance Sensor
 * **Actuator:** 1x SG90 9g Micro Servo (180° sweep range)
-* **Passive Components:** 1x Capacitor (across 5V/GND power rail)
+* **Passive Components:** 1x 100 µF Capacitor (across 5V/GND power rail)
 * **Prototyping & Wiring:** 
   * 1x Solderless Breadboard
   * Assorted Jumper Wires (Male-to-Male and Male-to-Female)
@@ -100,7 +102,7 @@ To eliminate environmental multipath interference and high-frequency acoustic di
   <img src="../images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
 </p>
 
-> **Schematic Source Files:** Raw test data and testing code available in [`tests/`](./tests/).
+> **Test Data Files:** Raw test data and testing code available in [`tests/`](./tests/).
 
 ### Empirical Performance Metrics
 * **Single-Sample Glitch Suppression:** Strips severe transient acoustic multipath reflections (e.g., rejecting an instantaneous $+20\text{ cm}$ spike at $154^\circ$) without causing trajectory corruption.
@@ -145,7 +147,7 @@ if (currentTime - lastMoveTime >= sweepSpeed) {
 
 ### 4. Mechanical Alignment & Beam Mapping
 * **Problem:** Initial mounting created an angular offset between the sensor face and the servo output spline, skewing target angles on the GUI map.
-* **Solution:** Designed and 3D-printed a custom sensor bracket in SolidWorks that positions the ultrasonic transducer centered directly along the servo's rotational axis.
+* **Solution:** Designed and 3D-printed a custom sensor bracket in SolidWorks that positions the ultrasonic transducer centered directly along the servo's rotational axis. Made sure to account for PLA shrinkage and printer backlash by oversizing the part by 0.2mm. Designed the HC-SR04 housing and the servo horn to be press fit to keep simple easy to print part geometry.
 
 <br>
 
@@ -153,7 +155,7 @@ if (currentTime - lastMoveTime >= sweepSpeed) {
 | :---: |
 | <img src="../images/Isometric_Assembly.png" height ="500" /> |
 
-> **Schematic Source Files:** All CAD components and Assembly available in [`CAD/`](./CAD/).
+> **CAD Source Files:** All CAD components and Assembly available in [`CAD/`](./CAD/).
 
 ---
 
