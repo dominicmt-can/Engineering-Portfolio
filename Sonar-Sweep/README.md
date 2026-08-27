@@ -40,17 +40,20 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
   * 1x USB 2.0 Cable (Power & Serial Telemetry)
 * **Mounting & Structure:** Custom 3D-Printed Sensor Bracket (Generic Black PLA, printed on Bambu Lab A1 Mini)
 
+---
+
 ### Hardware Interconnect & Breadboard Distribution
 
 <div align="center">
 
 | Circuit layout |
 | :---: |
-| <img src="../images/Circuit_Schematic.png" height ="260" /> |
+| <img src="../images/Circuit_Schematic.png" height ="450" /> |
 
 </div>
 
 > **Schematic Source Files:** Complete KiCad project, symbol tables, and schematic sheets available in [`circuits/`](./circuits/).
+
 
 | Device / Module | Pin / Signal | Connection Target | Functional Purpose |
 | :--- | :--- | :--- | :--- |
@@ -160,15 +163,21 @@ if (currentTime - lastMoveTime >= sweepSpeed) {
 ## Directory Structure
 
 * **Sonar-Sweep/**
-  * `README.md` — Technical documentation
-  * [`sonar_sweep.ino`](./sonar_sweep.ino) — Main embedded firmware with 3-median filter and non-blocking scheduling.
-  * [`radar_scope.pde`](./radar_scope.pde) — Processing GUI script for serial decoding and dynamic polar rendering.
+  * `README.md` — Technical documentation and system architecture breakdown.
+  * `sonar_sweep.ino` — Embedded Arduino C/C++ firmware with 3-median filtering and non-blocking scheduling.
+  * `radar_scope.pde` — Processing GUI visualizer for serial decoding and real-time polar sweep rendering.
   * **CAD/**
-    * [`sonar_bracket.STEP`](./CAD/sonar_bracket.STEP) — Universal STEP assembly model of the sensor mounting bracket.
-    * [`sonar_bracket.STL`](./CAD/sonar_bracket.STL) — Slicer-ready stereolithography 3D print file.
+    * `Servo_Assembly.SLDASM` — Master SolidWorks assembly with mates and exploded view configuration.
+    * `sonar_bracket.STEP` — Universal STEP exchange model of the custom sensor mounting bracket.
+    * `Servo_Assembly - sonar_bracket-1.STL` — Slicer-ready STL for 3D printing the mounting bracket.
+    * `Servo_Assembly - servoarm-1.STL` — Servo horn interface model.
+    * `Servo_Assembly - HC-SR04_UltraSonic Sensor<2>.STL` — Ultrasonic transducer reference geometry.
+    * `Servo_Assembly - SERVO_SG90.stp-1.STL` — SG90 micro servo base geometry.
+  * **circuits/**
+    * `Servo_Sweep_Circuit.kicad_sch` — Schematic sheet with pinouts, net labels, and decoupling capacitor.
+    * `Servo_Sweep_Circuit.kicad_pro` — Main KiCad project management file.
+    * `sym-lib-table` — Local project symbol library table.
   * **tests/**
-    * [`filter_test.ino`](./tests/filter_test.ino) — Telemetry test benchmark firmware.
-    * [`raw_telemetry.csv`](./tests/raw_telemetry.csv) — 150-point recorded hardware sweep dataset.
-    * [`filter_analysis.xlsx`](./tests/filter_analysis.xlsx) — Excel workbook containing raw series and comparative chart.
-
-```
+    * `filter_test.ino` — Diagnostic firmware for logging raw vs. filtered telemetry over serial.
+    * `raw_telemetry.csv` — Logged 150-point hardware sweep dataset.
+    * `filter_analysis.xlsx` — Data analysis workbook containing statistical comparison and response curves.
