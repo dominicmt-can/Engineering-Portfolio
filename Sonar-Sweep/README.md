@@ -2,15 +2,19 @@
 
 A single-axis scanning radar system that pairs an ultrasonic rangefinder with a continuous servo sweep to stream real-time spatial mapping data over USB to a custom desktop GUI.
 
+<br>
+
 <p align="center">
   <img src="../images/sonar_demo.gif" alt="Live Sonar Sweep Demo" width="80%" />
 </p>
 
 <div align="center">
 
-| Sonar and Custom Servo Attachment | Assembled Microcontroller Rig | CAD Assembly |
-| :---: | :---: | :---: |
-| <img src="../images/Servo_Print_and_Stand.png" height="260" /> | <img src="../images/ServoSonarSetup.jpg" height="260" /> | <img src="../images/Isometric_Assembly.png" height ="260" /> |
+<br>
+
+| Sonar and Custom Servo Attachment | Assembled Microcontroller Rig |
+| :---: | :---: |
+| <img src="../images/Servo_Print_and_Stand.png" height="260" /> | <img src="../images/ServoSonarSetup.jpg" height="260" /> |
 
 </div>
 
@@ -46,13 +50,9 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 <br>
 
-<div align="center">
-
 | Circuit layout |
 | :---: |
 | <img src="../images/Circuit_Schematic.png" height ="700" /> |
-
-</div>
 
 > **Schematic Source Files:** Complete KiCad project, symbol tables, and schematic sheets available in [`circuits/`](./circuits/).
 
@@ -99,6 +99,7 @@ To eliminate environmental multipath interference and high-frequency acoustic di
 <p align="center">
   <img src="../images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
 </p>
+> **Schematic Source Files:** Raw test data and testing code available in [`tests/`](./tests/).
 
 ### Empirical Performance Metrics
 * **Single-Sample Glitch Suppression:** Strips severe transient acoustic multipath reflections (e.g., rejecting an instantaneous $+20\text{ cm}$ spike at $154^\circ$) without causing trajectory corruption.
@@ -144,6 +145,14 @@ if (currentTime - lastMoveTime >= sweepSpeed) {
 ### 4. Mechanical Alignment & Beam Mapping
 * **Problem:** Initial mounting created an angular offset between the sensor face and the servo output spline, skewing target angles on the GUI map.
 * **Solution:** Designed and 3D-printed a custom sensor bracket in SolidWorks that positions the ultrasonic transducer centered directly along the servo's rotational axis.
+
+<br>
+
+| CAD Assembly |
+| :---: |
+| <img src="../images/Isometric_Assembly.png" height ="500" /> |
+
+> **Schematic Source Files:** All CAD components and Assembly available in [`CAD/`](./CAD/).
 
 ---
 
