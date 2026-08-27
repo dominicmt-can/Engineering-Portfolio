@@ -16,7 +16,7 @@ Project Motivation: Created as an independent initiative to apply manufacturing 
 
 | Sonar and Custom Servo Attachment | Assembled Microcontroller Rig |
 | :---: | :---: |
-| <img src="../images/Servo_Print_and_Stand.png" height="260" /> | <img src="../images/ServoSonarSetup.jpg" height="260" /> |
+| <img src="../images/Servo_Print_and_Stand.png" height="450" /> | <img src="../images/ServoSonarSetup.jpg" height="450" /> |
 
 </div>
 
