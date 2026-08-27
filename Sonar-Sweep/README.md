@@ -44,16 +44,19 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 ### Hardware Interconnect & Breadboard Distribution
 
+<br>
+
 <div align="center">
 
 | Circuit layout |
 | :---: |
-| <img src="../images/Circuit_Schematic.png" height ="450" /> |
+| <img src="../images/Circuit_Schematic.png" height ="700" /> |
 
 </div>
 
 > **Schematic Source Files:** Complete KiCad project, symbol tables, and schematic sheets available in [`circuits/`](./circuits/).
 
+<br>
 
 | Device / Module | Pin / Signal | Connection Target | Functional Purpose |
 | :--- | :--- | :--- | :--- |
