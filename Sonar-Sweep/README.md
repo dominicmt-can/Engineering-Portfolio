@@ -175,22 +175,22 @@ if (currentTime - lastMoveTime >= sweepSpeed) {
 
 ## Directory Structure
 
-* [**Sonar-Sweep/**](./)
-  * ├── [`README.md`](./README.md) — Technical documentation and system architecture breakdown
-  * ├── [`sonar_sweep.ino`](./sonar_sweep.ino) — Embedded Arduino C/C++ firmware with 3-median filtering
-  * ├── [`radar_scope.pde`](./radar_scope.pde) — Processing GUI visualizer for real-time polar sweep rendering
-  * ├── [**CAD/**](./CAD/)
-  * │   ├── [`Servo_Assembly.SLDASM`](./CAD/Servo_Assembly.SLDASM) — Master SolidWorks assembly with exploded configuration
-  * │   ├── [`sonar_bracket.STEP`](./CAD/sonar_bracket.STEP) — Universal STEP exchange model
-  * │   ├── [`Servo_Assembly - sonar_bracket-1.STL`](<./CAD/Servo_Assembly - sonar_bracket-1.STL>) — Slicer-ready bracket 3D print file
-  * │   ├── [`Servo_Assembly - servoarm-1.STL`](<./CAD/Servo_Assembly - servoarm-1.STL>) — Servo horn interface geometry
-  * │   ├── [`Servo_Assembly - HC-SR04_UltraSonic Sensor<2>.STL`](<./CAD/Servo_Assembly - HC-SR04_UltraSonic Sensor<2>.STL>) — Ultrasonic transducer reference model
-  * │   └── [`Servo_Assembly - SERVO_SG90.stp-1.STL`](<./CAD/Servo_Assembly - SERVO_SG90.stp-1.STL>) — SG90 micro servo base geometry
-  * ├── [**circuits/**](./circuits/)
-  * │   ├── [`Servo_Sweep_Circuit.kicad_sch`](./circuits/Servo_Sweep_Circuit.kicad_sch) — Schematic sheet with decoupling and pin mapping
-  * │   ├── [`Servo_Sweep_Circuit.kicad_pro`](./circuits/Servo_Sweep_Circuit.kicad_pro) — Main KiCad project management file
-  * │   └── [`sym-lib-table`](./circuits/sym-lib-table) — Local symbol library mapping table
-  * └── [**tests/**](./tests/)
-  *     ├── [`filter_test.ino`](./tests/filter_test.ino) — Telemetry logging benchmark firmware
-  *     ├── [`raw_telemetry.csv`](./tests/raw_telemetry.csv) — 150-point recorded hardware sweep dataset
-  *     └── [`filter_analysis.xlsx`](./tests/filter_analysis.xlsx) — Excel workbook with raw vs. filtered comparison curves
+[**Sonar-Sweep/**](./)  
+├── [`README.md`](./README.md) — Technical documentation and system architecture breakdown  
+├── [`sonar_sweep.ino`](./sonar_sweep.ino) — Embedded Arduino C/C++ firmware with 3-median filtering  
+├── [`radar_scope.pde`](./radar_scope.pde) — Processing GUI visualizer for real-time polar sweep rendering  
+├── [**CAD/**](./CAD/)  
+│&nbsp;&nbsp;&nbsp;├── [`Servo_Assembly.SLDASM`](./CAD/Servo_Assembly.SLDASM) — Master SolidWorks assembly with exploded configuration  
+│&nbsp;&nbsp;&nbsp;├── [`sonar_bracket.STEP`](./CAD/sonar_bracket.STEP) — Universal STEP exchange model  
+│&nbsp;&nbsp;&nbsp;├── [`Servo_Assembly - sonar_bracket-1.STL`](./CAD/Servo_Assembly%20-%20sonar_bracket-1.STL) — Slicer-ready bracket 3D print file  
+│&nbsp;&nbsp;&nbsp;├── [`Servo_Assembly - servoarm-1.STL`](./CAD/Servo_Assembly%20-%20servoarm-1.STL) — Servo horn interface geometry  
+│&nbsp;&nbsp;&nbsp;├── [`Servo_Assembly - HC-SR04_UltraSonic Sensor<2>.STL`](./CAD/Servo_Assembly%20-%20HC-SR04_UltraSonic%20Sensor%3C2%3E.STL) — Ultrasonic transducer reference model  
+│&nbsp;&nbsp;&nbsp;└── [`Servo_Assembly - SERVO_SG90.stp-1.STL`](./CAD/Servo_Assembly%20-%20SERVO_SG90.stp-1.STL) — SG90 micro servo base geometry  
+├── [**circuits/**](./circuits/)  
+│&nbsp;&nbsp;&nbsp;├── [`Servo_Sweep_Circuit.kicad_sch`](./circuits/Servo_Sweep_Circuit.kicad_sch) — Schematic sheet with decoupling and pin mapping  
+│&nbsp;&nbsp;&nbsp;├── [`Servo_Sweep_Circuit.kicad_pro`](./circuits/Servo_Sweep_Circuit.kicad_pro) — Main KiCad project management file  
+│&nbsp;&nbsp;&nbsp;└── [`sym-lib-table`](./circuits/sym-lib-table) — Local symbol library mapping table  
+└── [**tests/**](./tests/)  
+&nbsp;&nbsp;&nbsp;&nbsp;├── [`filter_test.ino`](./tests/filter_test.ino) — Telemetry logging benchmark firmware  
+&nbsp;&nbsp;&nbsp;&nbsp;├── [`raw_telemetry.csv`](./tests/raw_telemetry.csv) — 150-point recorded hardware sweep dataset  
+&nbsp;&nbsp;&nbsp;&nbsp;└── [`filter_analysis.xlsx`](./tests/filter_analysis.xlsx) — Excel workbook with raw vs. filtered comparison curves
