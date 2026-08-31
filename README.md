@@ -41,6 +41,12 @@ A single-axis radar scanner built from an ultrasonic rangefinder mounted on a ho
 
 A single-stage epicyclic gear reduction modeled in SolidWorks, mathematically pre-validated for concentric meshing, and fabricated via FDM 3D printing.
 
+<br>
+
+<p align = "center>
+  <img src="images/Gear_Asem_Exploded.gif" alt = "Live Assembly Demo" width = "80%"/>
+</p>
+
 <div align="center">
 
 <br>
