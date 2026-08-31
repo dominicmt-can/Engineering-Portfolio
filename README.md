@@ -43,7 +43,7 @@ A single-stage epicyclic gear reduction modeled in SolidWorks, mathematically pr
 
 <br>
 
-<p align = "center>
+<p align = "center">
   <img src="images/Gear_Asem_Exploded.gif" alt = "Live Assembly Demo" width = "80%"/>
 </p>
 
