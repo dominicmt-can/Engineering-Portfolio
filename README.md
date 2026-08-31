@@ -47,7 +47,7 @@ A single-stage epicyclic gear reduction modeled in SolidWorks, mathematically pr
 
 | Assembled Planetary Stage | Disassembled 3D-Printed Parts |
 | :---: | :---: |
-| <img src="images/AssembledGear.png" height="240" /> | <img src="images/DisassembledGear.png" height="240" /> |
+| <img src="images/Gear_IRL_Iso_Asem.jpg" height="240" /> | <img src="images/DisassembledGear.png" height="240" /> |
 
 </div>
 
