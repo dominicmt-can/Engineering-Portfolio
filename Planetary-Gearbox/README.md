@@ -6,11 +6,11 @@ A single-stage epicyclic gear reduction modeled in SolidWorks, mathematically pr
 
 <br>
 
-<p align="center">
+<p align = "center">
   <img src="../images/Gear_Asem_Exploded.gif" alt="Exploded Gear Assembly" width="80%" />
 </p>
 
-<div align="center">
+<div align = "center">
 
 <br>
 
@@ -56,7 +56,7 @@ Directly translating theoretical involute curves to an FDM printer results in fu
 <br>
 
 <p align = "center">
-  <img src="../images/FDM_Display.png" alt="Involute Profiles" width="70%" />
+  <img src="../images/DFM_Display.png" alt="Involute Profiles" width="70%" />
 </p>
 
 <br>
@@ -71,6 +71,15 @@ Directly translating theoretical involute curves to an FDM printer results in fu
 
 [**Planetary-Gearbox/**](./)  
 ├── [**CAD/**](./CAD/)  
-│&nbsp;&nbsp;&nbsp;└── *(CAD file tree to be added)*  
+│&nbsp;&nbsp;&nbsp;├── [`Planetarygear_Assem.SLDASM`](./CAD/Planetarygear_Assem.SLDASM) — Master SolidWorks epicyclic assembly  
+│&nbsp;&nbsp;&nbsp;├── [`Planetarygear_Assem.STL`](./CAD/Planetarygear_Assem.STL) — Full assembly reference geometry  
+│&nbsp;&nbsp;&nbsp;├── [`PlanetGear_v1.SLDPRT`](./CAD/PlanetGear_v1.SLDPRT) — Planet gear SolidWorks part (-0.20 mm offset)  
+│&nbsp;&nbsp;&nbsp;├── [`PlanetGear_v1.STL`](./CAD/PlanetGear_v1.STL) — Planet gear slicer-ready print file  
+│&nbsp;&nbsp;&nbsp;├── [`PlanetGearPlate_v1.SLDPRT`](./CAD/PlanetGearPlate_v1.SLDPRT) — 3-pin carrier plate SolidWorks part  
+│&nbsp;&nbsp;&nbsp;├── [`PlanetGearPlate_v1.STL`](./CAD/PlanetGearPlate_v1.STL) — 3-pin carrier plate slicer-ready print file  
+│&nbsp;&nbsp;&nbsp;├── [`RingGear_v1.SLDPRT`](./CAD/RingGear_v1.SLDPRT) — Stationary ring gear housing SolidWorks part  
+│&nbsp;&nbsp;&nbsp;├── [`RingGear_v1.STL`](./CAD/RingGear_v1.STL) — Stationary ring gear housing slicer-ready print file  
+│&nbsp;&nbsp;&nbsp;├── [`sungear_v1.SLDPRT`](./CAD/sungear_v1.SLDPRT) — Hex-drive sun gear SolidWorks part  
+│&nbsp;&nbsp;&nbsp;└── [`sungear_v1.STL`](./CAD/sungear_v1.STL) — Hex-drive sun gear slicer-ready print file  
 └── [**tests/**](./tests/)  
 &nbsp;&nbsp;&nbsp;&nbsp;└── [`planetary_validation.m`](./tests/planetary_validation.m) — MATLAB kinematic verification script
