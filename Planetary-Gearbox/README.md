@@ -55,8 +55,8 @@ Directly translating theoretical involute curves to an FDM printer results in fu
 
 <br>
 
-<p align="center">
-  <img src="../images/DisassembledGear.png" alt="Disassembled Gear Train" width="70%" />
+<p align = "center">
+  <img src="../images/FDM_Display.png" alt="Involute Profiles" width="70%" />
 </p>
 
 <br>
