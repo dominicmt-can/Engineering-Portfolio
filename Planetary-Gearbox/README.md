@@ -67,6 +67,26 @@ Directly translating theoretical involute curves to an FDM printer results in fu
 
 ---
 
+## Technical Drawings & Empirical Validation
+
+* **ASME Y14.5 Drawing Package:** Produced a formal 5-sheet engineering drawing package detailing the master assembly with a Bill of Materials (BOM), envelope dimensions, and individual component sheets featuring Module 2.5 gear parameter tables.
+* **Back-Drivability & Backlash:** Verified smooth, 360° non-binding rotation under manual drive. The -0.20 mm flank thinning offset successfully accommodated FDM layer squish while maintaining minimal backlash upon rotation reversal.
+* **Transmission Ratio Verification:** Confirmed the theoretical 3:1 reduction experimentally ($1 + N_r / N_s = 1 + 48 / 24 = 3$) by tracking carrier angular displacement relative to sun gear input turns.
+* **Clearance Validation:** Validated the 0.40 mm radial sliding clearance between carrier pins and planet bores, achieving free rotation without excessive wobble.
+
+> **Drawing Package:** Full drawing set available in [`Drawings/Planetary_Gearbox_Drawing_Package.pdf`](./Drawings/Planetary_Gearbox_Drawing_Package.pdf).
+
+---
+
+## Future Improvements
+
+* **Rolling Element Bearings:** Replace the direct printed pin-to-bore sliding interfaces with miniature deep-groove ball bearings (e.g., 608 or MR-series) to reduce frictional losses and pin wear under sustained load.
+* **Dual-Plate Carrier Architecture:** Upgrade the single cantilevered 3-pin carrier plate to a double-sided trapped carrier cage, eliminating pin deflection and tooth misalignment during high-torque transmission.
+* **Compound / Multi-Stage Configuration:** Design an interchangeable stacking interface to daisy-chain multiple epicyclic stages, allowing higher reduction ratios (9:1, 27:1) within the same outer envelope.
+* **Automated Dynamometer Bench:** Build an embedded load-testing rig using an Arduino, stepper motor, and load cell to log continuous torque transmission efficiency and thermal degradation over runtime.
+
+---
+
 ## Directory Structure
 
 [**Planetary-Gearbox/**](./)  
@@ -79,7 +99,10 @@ Directly translating theoretical involute curves to an FDM printer results in fu
 │&nbsp;&nbsp;&nbsp;├── [`PlanetGearPlate_v1.STL`](./CAD/PlanetGearPlate_v1.STL) — 3-pin carrier plate slicer-ready print file  
 │&nbsp;&nbsp;&nbsp;├── [`RingGear_v1.SLDPRT`](./CAD/RingGear_v1.SLDPRT) — Stationary ring gear housing SolidWorks part  
 │&nbsp;&nbsp;&nbsp;├── [`RingGear_v1.STL`](./CAD/RingGear_v1.STL) — Stationary ring gear housing slicer-ready print file  
-│&nbsp;&nbsp;&nbsp;├── [`sungear_v1.SLDPRT`](./CAD/sungear_v1.SLDPRT) — Hex-drive sun gear SolidWorks part  
-│&nbsp;&nbsp;&nbsp;└── [`sungear_v1.STL`](./CAD/sungear_v1.STL) — Hex-drive sun gear slicer-ready print file  
+│&nbsp;&nbsp;&nbsp;├── [`sungear_v1.SLDPRT`](./CAD/sungear_v1.SLDPRT) — Drive sun gear SolidWorks part  
+│&nbsp;&nbsp;&nbsp;└── [`sungear_v1.STL`](./CAD/sungear_v1.STL) — Drive sun gear slicer-ready print file  
+├── [**Drawings/**](./Drawings/)  
+│&nbsp;&nbsp;&nbsp;├── [`Planetary_Gearbox_Drawing_Package.pdf`](./Drawings/Planetary_Gearbox_Drawing_Package.pdf) — Complete 5-sheet ASME Y14.5 drawing set  
+│&nbsp;&nbsp;&nbsp;└── [`Planetarygear_Assem_Drawing.SLDDRW`](./Drawings/Planetarygear_Assem_Drawing.SLDDRW) — Master SolidWorks drawing package  
 └── [**tests/**](./tests/)  
 &nbsp;&nbsp;&nbsp;&nbsp;└── [`planetary_validation.m`](./tests/planetary_validation.m) — MATLAB kinematic verification script
