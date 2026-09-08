@@ -13,9 +13,9 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 ---
 
 <p align="center">
-  <img src="../images/Rocket-Nose-Cone-Mold-Disassembled-Iso.png" alt="Disassembled nose cone mold, isometric view" width="32%" />
-  <img src="../images/Rocket-Nose-Cone-Mold-Disassembled-Front.png" alt="Disassembled nose cone mold, front view" width="32%" />
-  <img src="../images/Rocket-Nose-Cone-Mold.png" alt="Rocket nose cone mold" width="32%" />
+  <img src="../images/Rocket-Nose-Cone-Mold-Disassembled-Iso.png" alt="Disassembled nose cone mold, isometric view" height="360" hspace="8" />
+  <img src="../images/Rocket-Nose-Cone-Mold-Disassembled-Front.png" alt="Disassembled nose cone mold, front view" height="360" hspace="8" />
+  <img src="../images/Rocket-Nose-Cone-Mold.png" alt="Rocket nose cone mold" height="360" hspace="8" />
 </p>
 
 ## Technical Specifications
