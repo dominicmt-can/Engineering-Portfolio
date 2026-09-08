@@ -35,23 +35,32 @@ A single-stage epicyclic gear reduction modeled in SolidWorks, mathematically pr
 
 ---
 
-## Kinematic Validation (MATLAB)
+## Hardware & Bill of Materials (BOM)
 
-Before committing the geometry to CAD, the gear parameters were analytically verified using a custom MATLAB script to ensure physical meshing without interference.
-
-* **Concentricity Verification:** Confirmed the standard epicyclic spatial constraint where the ring gear tooth count equals the sun gear plus twice the planet gear tooth count: 
-  $N_r = N_s + 2N_p$
-* **Carrier Symmetry:** Verified that three planet gears could be equispaced at exactly 120° intervals by ensuring the sum of the sun and ring teeth is divisible by the number of planets ($P$):
-  $\frac{N_s + N_r}{P} \in \mathbb{Z}$
-* **Transverse Contact Ratio:** Calculated the expected contact ratio to guarantee continuous power transmission without mesh drop-outs, achieving $\epsilon = 1.511$ (exceeding the standard $\geq 1.2$ safety threshold).
-
-> **Kinematic Script:** The raw `.m` script is available in [`tests/`](./tests/).
+* **Actuation / Input:** Integrated manual hex-drive (Standard socket/wrench compatible)
+* **Printed Components:** 
+  * 1x Sun Gear (`sungear_v1.STL`)
+  * 3x Planet Gears (`PlanetGear_v1.STL`)
+  * 1x Carrier Plate with 3 integrated pins (`PlanetGearPlate_v1.STL`)
+  * 1x Stationary Ring Gear Housing (`RingGear_v1.STL`)
+* **Fasteners / Bearings:** 100% 3D printed; utilizes raw PLA-on-PLA sliding interfaces with designed clearance gaps.
 
 ---
 
-## Design for Additive Manufacturing (DFAM)
+## Key Engineering Challenges & Solutions
 
-Directly translating theoretical involute curves to an FDM printer results in fused, immovable parts due to material expansion and machine kinematics. The physical models were modified in SolidWorks to ensure a dynamic, low-friction fit.
+### 1. Kinematic Validation & Concentricity
+* **Problem:** Arbitrarily picking gear tooth counts for a planetary system usually results in geometric interference, where the planets fail to mesh simultaneously with the sun and ring gears.
+* **Solution:** Developed a custom MATLAB script to analytically verify the gear parameters before committing geometry to CAD, ensuring physical meshing without interference.
+  * **Concentricity Verification:** Confirmed the standard epicyclic spatial constraint where the ring gear tooth count equals the sun gear plus twice the planet gear tooth count: $N_r = N_s + 2N_p$.
+  * **Carrier Symmetry:** Verified that three planet gears could be equispaced at exactly 120° intervals by ensuring the sum of the sun and ring teeth is divisible by the number of planets ($P$): $\frac{N_s + N_r}{P} \in \mathbb{Z}$.
+  * **Transverse Contact Ratio:** Calculated the expected contact ratio to guarantee continuous power transmission without mesh drop-outs, achieving $\epsilon = 1.511$ (exceeding the standard $\geq 1.2$ safety threshold).
+
+> **Kinematic Script:** The raw `.m` script is available in [`tests/`](./tests/).
+
+### 2. Design for Additive Manufacturing (DFAM)
+* **Problem:** Directly translating theoretical involute curves to an FDM printer results in fused, immovable parts due to material expansion, layer squish, and machine kinematics.
+* **Solution:** Modified the physical models in SolidWorks to ensure a dynamic, low-friction fit by applying a uniform -0.20 mm normal offset across all gear involute profiles. This acts as a designed-in backlash, explicitly compensating for standard PLA over-extrusion to prevent binding during hand-cranking.
 
 <br>
 
@@ -59,11 +68,9 @@ Directly translating theoretical involute curves to an FDM printer results in fu
   <img src="../images/DFM_Display.png" alt="Involute Profiles" width="70%" />
 </p>
 
-<br>
-
-* **Flank Thinning Offset:** Applied a uniform -0.20 mm normal offset across all gear involute profiles. This acts as a designed-in backlash, explicitly compensating for standard PLA over-extrusion and layer squish to prevent binding during hand-cranking.
-* **Mass & Time Reduction:** Integrated curved relief pockets into the carrier plates. This significantly reduced rotational mass and print time while maintaining structural rigidity around the planetary pin joints.
-* **Print Orientation:** Shafts, pins, and hex drives were designed and oriented parallel to the Z-axis to avoid shear-plane delamination under torsional loads.
+### 3. Structural Integrity vs. Rotational Mass
+* **Problem:** Solid PLA gear faces and carrier plates take too long to print and increase rotational inertia, while poorly oriented shaft prints shear under torsional load.
+* **Solution:** Integrated curved relief pockets into the carrier plates to reduce rotational mass and print time while maintaining rigidity around the planetary pin joints. Oriented all shafts, pins, and hex drives parallel to the Z-axis on the build plate to prevent shear-plane delamination.
 
 ---
 
@@ -75,6 +82,18 @@ Directly translating theoretical involute curves to an FDM printer results in fu
 * **Clearance Validation:** Validated the 0.40 mm radial sliding clearance between carrier pins and planet bores, achieving free rotation without excessive wobble.
 
 > **Drawing Package:** Full drawing set available in [`Drawings/Planetary_Gearbox_Drawing_Package.pdf`](./Drawings/Planetary_Gearbox_Drawing_Package.pdf).
+
+---
+
+## Assembly & Quick Start Guide
+
+1. **Print Configuration:** Print all components in PLA with a 0.2 mm layer height. Ensure elephant-foot compensation is enabled in the slicer to preserve the bottom edge of the involute teeth.
+2. **Post-Processing:** Use a deburring tool to lightly break sharp edges on the bottom faces of the gears and carrier pins. 
+3. **Assembly Sequence:** 
+   * Drop the **Sun Gear** into the center of the **Ring Gear** housing.
+   * Mesh the 3 **Planet Gears** around the Sun Gear at 120° intervals.
+   * Align the 3 pins on the **Carrier Plate** with the center bores of the planet gears and press firmly to seat the carrier.
+4. **Testing:** Apply a hex wrench to the Sun Gear input shaft and verify that the Carrier Plate output shaft rotates at exactly $1/3$ the input speed.
 
 ---
 
