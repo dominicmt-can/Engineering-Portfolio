@@ -88,11 +88,23 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 <br>
   
-**Tooling Geometry & Manufacturing Process**
+**Tooling & Manufacturing Process**
 
 <p align="center">
   <img src="images/Rocket-Nose-Cone-Real-Standing.png" alt="Raw composite nose cone post-infusion" width="80%" />
 </p>
+
+1. **Tooling Fabrication:** Print `UBC Rocket Nose Cone Mold.stl` in PETG with a high perimeter count and ~ 30% infill to withstand vacuum pressure.
+2. **Tooling Post-Processing:** Sand the mold smooth to remove FDM layer lines, apply body filler where needed, buff between coats, and finish with a resin barrier coat for an airtight, non-stick surface.
+3. **Material Prep:** Cut the biaxial fiberglass sleeving to length.
+4. **Dry Layup & Bagging:**
+   * Apply release film to the mold so the part doesn't stick.
+   * Slide the biaxial sleeves over the mandrel in sequence — 6" sleeve, then 4", then 6" — pulling each layer taut to conform to the taper.
+   * Apply peel ply, flow mesh, and spiral tubing for resin feed and vacuum catch.
+   * Seal the assembly in a vacuum bag with tacky tape.
+   * Pull a full vacuum and check for a leak-free envelope.
+5. **Vacuum Infusion:** Mix the epoxy resin system, then open the feed line and let atmospheric pressure drive resin through the fiberglass matrix until fully wetted out.
+6. **Demolding:** Let the part cure fully per the resin datasheet, then remove it from the mold (sliding it off directly if possible, or heating the mold until it releases the part if not).
 
 **Tools:** Fusion 360, Composites Manufacturing, Vacuum Infusion, FDM 3D Printing, Geometric Sizing Analysis  
 **Files:** [`Rocket-Nose-Cone/`](./Rocket-Nose-Cone/)
