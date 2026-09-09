@@ -18,11 +18,6 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
   <img src="../images/Rocket-Nose-Cone-Mold.png" alt="Rocket nose cone mold" height="360" hspace="8" />
 </p>
 
-<p align="center">
-  <img src="../images/Rocket-Nose-Cone-Real-Standing.png" alt="Finished rocket nose cone standing vertically" height="360" hspace="8" />
-  <img src="../images/Rocket-Nose-Cone-Real-Side.png" alt="Finished rocket nose cone side view" height="360" hspace="8" />
-</p>
-
 ## Technical Specifications
 
 * **Architecture:** Tangent-ogive nose cone profile (tooling / male mold)
@@ -69,6 +64,13 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 * **Analytical Sizing List:** Station-by-station dimensional list specifying exact sleeving dimensions and stretch requirements.
 * **Clearance Validation:** Verified structural thickness calculations against the mating body tube's internal diameter for a slip-fit without excessive sanding or machining.
 * **Vacuum Integrity & Surface Prep:** Post-processed the PETG mold (progressive-grit sanding, body filler, multiple resin coats) to remove FDM layer lines, seal porosity, and produce a smooth finish on the demolded part.
+
+--- 
+
+<p align="center">
+  <img src="../images/Rocket-Nose-Cone-Real-Standing.png" alt="Finished rocket nose cone standing vertically" height="360" hspace="8" />
+  <img src="../images/Rocket-Nose-Cone-Real-Side.png" alt="Finished rocket nose cone side view" height="360" hspace="8" />
+</p>
 
 ---
 
