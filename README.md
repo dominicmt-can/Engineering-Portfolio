@@ -82,6 +82,10 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
   <img src="images/Rocket-Nose-Cone-Mold.png" alt="Rocket nose cone mold" width="48%" />
 </p>
 
+<p align="center">
+  <img src="images/Rocket-Nose-Cone-Real-Standing.png" alt="Finished rocket nose cone standing vertically" width="80%" />
+</p>
+
 * **Aerodynamic Surface Modeling:** Designed a 380 mm tangent-ogive profile with a 53 mm base radius in Fusion 360, used as the male mandrel for vacuum infusion.
 * **Analytical Station Layup Schedule:** Discretized the ogive into 20 mm vertical stations to derive target perimeter reductions (166.5 mm at the base tapering to 0 mm at the tip), preventing localized bunching and resin starvation in the biaxial sleeving.
 * **DFAM Mandrel Engineering:** Tuned FDM perimeter density and shell thickness in Bambu Studio so the mold could withstand full atmospheric vacuum (-101 kPa) without collapsing, then sealed PETG porosity with filler and epoxy barrier coats.
