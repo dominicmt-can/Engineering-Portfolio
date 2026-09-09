@@ -87,8 +87,6 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 * **Resin Infusion Strategy:** Sequenced a graduated biaxial fiberglass sleeve layup (6" → 4" → 6") over release film and flow mesh, achieving uniform wet-out and clearances that mate cleanly with the primary airframe body tube.
 
 <br>
-
-<div align="center">
   
 **Tooling Geometry & Manufacturing Process**
 
