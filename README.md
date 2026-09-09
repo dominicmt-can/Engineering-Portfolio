@@ -72,10 +72,21 @@ A single-stage epicyclic gear reduction modeled in SolidWorks, mathematically pr
 A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and manufactured by vacuum infusion over a 3D-printed mandrel.
 
 <p align="center">
-  <img src="images/Rocket-Nose-Cone.png" alt="Nose Cone Digital Profile" width="80%" />
+  <img src="images/Rocket-Nose-Cone.png" alt="Finished Composite Nose Cone" width="80%" />
 </p>
 
+* **Aerodynamic Surface Modeling:** Designed a 380 mm tangent-ogive profile with a 53 mm base radius in Fusion 360, used as the male mandrel for vacuum infusion.
+* **Analytical Station Layup Schedule:** Discretized the ogive into 20 mm vertical stations to derive target perimeter reductions (166.5 mm at the base tapering to 0 mm at the tip), preventing localized bunching and resin starvation in the biaxial sleeving.
+* **DFAM Mandrel Engineering:** Tuned FDM perimeter density and shell thickness in Bambu Studio so the mold could withstand full atmospheric vacuum (-101 kPa) without collapsing, then sealed PETG porosity with filler and epoxy barrier coats.
+* **Resin Infusion Strategy:** Sequenced a graduated biaxial fiberglass sleeve layup (6" → 4" → 6") over release film and flow mesh, achieving uniform wet-out and clearances that mate cleanly with the primary airframe body tube.
+
 <br>
+
+<div align="center">
+  
+**Tooling Geometry & Manufacturing Process**
+
+</div>
 
 <p align="center">
   <img src="images/Rocket-Nose-Cone-Mold-Disassembled-Iso.png" alt="Disassembled nose cone mold, isometric view" height="360" hspace="8" />
@@ -83,13 +94,8 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 </p>
 
 <p align="center">
-  <img src="images/Rocket-Nose-Cone-Real-Standing.png" alt="Finished rocket nose cone standing vertically" width="80%" />
+  <img src="images/Rocket-Nose-Cone-Real-Standing.png" alt="Raw composite nose cone post-infusion" width="80%" />
 </p>
-
-* **Aerodynamic Surface Modeling:** Designed a 380 mm tangent-ogive profile with a 53 mm base radius in Fusion 360, used as the male mandrel for vacuum infusion.
-* **Analytical Station Layup Schedule:** Discretized the ogive into 20 mm vertical stations to derive target perimeter reductions (166.5 mm at the base tapering to 0 mm at the tip), preventing localized bunching and resin starvation in the biaxial sleeving.
-* **DFAM Mandrel Engineering:** Tuned FDM perimeter density and shell thickness in Bambu Studio so the mold could withstand full atmospheric vacuum (-101 kPa) without collapsing, then sealed PETG porosity with filler and epoxy barrier coats.
-* **Resin Infusion Strategy:** Sequenced a graduated biaxial fiberglass sleeve layup (6" → 4" → 6") over release film and flow mesh, achieving uniform wet-out and clearances that mate cleanly with the primary airframe body tube.
 
 **Tools:** Fusion 360, Composites Manufacturing, Vacuum Infusion, FDM 3D Printing, Geometric Sizing Analysis  
 **Files:** [`Rocket-Nose-Cone/`](./Rocket-Nose-Cone/)
