@@ -100,8 +100,13 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 ## Directory Structure
 
-[**Rocket-Nose-Cone/**](./)  
-├── [`README.md`](./README.md) — This documentation file  
-├── [`Rocket data.xlsx`](./Rocket%20data.xlsx) — Station slicing and dimensional sizing data  
-├── [`UBC Rocket Nose Cone Mold.f3d`](./UBC%20Rocket%20Nose%20Cone%20Mold.f3d) — Native Fusion 360 master CAD model  
-└── [`UBC Rocket Nose Cone Mold.stl`](./UBC%20Rocket%20Nose%20Cone%20Mold.stl) — Exported mold geometry
+[**Rocket-Nose-Cone/**](./)<br>
+├── [`README.md`](./README.md) — This documentation file<br>
+├── [`Rocket data.xlsx`](./Rocket%20data.xlsx) — Station slicing and dimensional sizing data<br>
+└── [**CAD/**](./CAD/)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── [`UBC Rocket Nose Cone Mold.f3d`](./CAD/UBC%20Rocket%20Nose%20Cone%20Mold.f3d) — Native Fusion 360 master CAD model<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── [`UBC Rocket Nose Cone Mold - lower.f3d`](./CAD/UBC%20Rocket%20Nose%20Cone%20Mold%20-%20lower.f3d) — Lower mold section<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── [`UBC Rocket Nose Cone Mold - middle.f3d`](./CAD/UBC%20Rocket%20Nose%20Cone%20Mold%20-%20middle.f3d) — Middle mold section<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── [`UBC Rocket Nose Cone Mold - upper.f3d`](./CAD/UBC%20Rocket%20Nose%20Cone%20Mold%20-%20upper.f3d) — Upper mold section<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── [`UBC Rocket Nose cone plug.f3d`](./CAD/UBC%20Rocket%20Nose%20cone%20plug.f3d) — Nose cone plug model<br>
+&nbsp;&nbsp;&nbsp;&nbsp;└── [`UBC Rocket Nose Cone Mold.stl`](./CAD/UBC%20Rocket%20Nose%20Cone%20Mold.stl) — Exported mold geometry
