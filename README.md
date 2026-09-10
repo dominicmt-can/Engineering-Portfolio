@@ -84,7 +84,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 * **Analytical Station Layup Schedule:** Discretized the ogive into 20 mm vertical stations to derive target perimeter reductions (166.5 mm at the base tapering to 0 mm at the tip), preventing localized bunching and resin starvation in the biaxial sleeving.
 * **DFAM Mandrel Engineering:** Tuned FDM perimeter density and shell thickness in Bambu Studio so the mold could withstand full atmospheric vacuum (-101 kPa) without collapsing, then sealed PETG porosity with filler and epoxy barrier coats.
-* **Resin Infusion Strategy:** Sequenced a graduated biaxial fiberglass sleeve layup (6" → 4" → 6") over release film and flow mesh, achieving uniform wet-out and clearances that mate cleanly with the primary airframe body tube.
+* **Resin Infusion Strategy:** Sequenced a graduated biaxial fiberglass sleeve layup (3" → 4" → 3") over a release film covered mandrel, achieving uniform wet-out and clearances that mate cleanly with the primary airframe body tube.
 
 <br>
   
@@ -100,7 +100,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 3. **Material Prep:** Cut the biaxial fiberglass sleeving to length.
 4. **Dry Layup & Bagging:**
    * Apply release film to the mold so the part doesn't stick.
-   * Slide the biaxial sleeves over the mandrel in sequence — 6" sleeve, then 4", then 6" — pulling each layer taut to conform to the taper.
+   * Slide the biaxial sleeves over the mandrel in sequence — 3" sleeve, then 4", then 3" — pulling each layer taut to conform to the taper.
    * Apply peel ply, flow mesh, and spiral tubing for resin feed and vacuum catch.
    * Seal the assembly in a vacuum bag with tacky tape.
    * Pull a full vacuum and check for a leak-free envelope.

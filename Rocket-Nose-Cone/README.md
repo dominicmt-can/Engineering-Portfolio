@@ -25,7 +25,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 * **Total Height:** 380.0 mm
 * **Manufacturing Stations:** Sliced into 20 mm height increments for layup accuracy
 * **Material (Tooling):** PETG, printed on a Bambu Lab X1 Carbon
-* **Material (Final Part):** Biaxial fiberglass roving tubing (6" and 4" diameter schedule)
+* **Material (Final Part):** Biaxial fiberglass roving tubing (3" and 4" diameter schedule)
 
 ---
 
@@ -35,7 +35,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
   * 1x Fusion 360 CAD model (`UBC Rocket Nose Cone Mold.f3d`)
   * 1x Nose cone mold print geometry (`UBC Rocket Nose Cone Mold.stl`)
 * **Composite Materials:**
-  * Biaxial fiberglass roving tubing/sleeving (6-inch and 4-inch nominal diameters)
+  * Biaxial fiberglass roving tubing/sleeving (3-inch and 4-inch nominal diameters)
   * Two-part aerospace-grade infusion epoxy resin system
 * **Vacuum Infusion Consumables:** Release film, peel ply, flow mesh, vacuum bagging film, tacky tape, spiral tubing (resin feed/vacuum lines), vacuum pump
 
@@ -51,7 +51,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 ### 2. Structural Thickness & Sleeve Sequencing
 * **Problem:** The finished airframe needs specific internal and external clearances to mate with the body tube, while keeping enough wall thickness to handle flight loads.
-* **Solution:** Used a layered sleeve schedule — 6" sleeve, then 4", then a final 6" (6" → 4" → 6") — and modeled predicted wall thickness analytically before infusion to confirm the cured part would follow the ogive profile within tolerance.
+* **Solution:** Used a layered sleeve schedule — 3" sleeve, then 4", then a final 3" (3" → 4" → 3") — and modeled predicted wall thickness analytically before infusion to confirm the cured part would follow the ogive profile within tolerance.
 
 ### 3. Tooling Design for Vacuum Infusion (DFAM)
 * **Problem:** FDM-printed tooling can leak through porous printed layers under vacuum, and hollow printed structures can crush under atmospheric pressure.
@@ -81,7 +81,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 3. **Material Prep:** Cut the biaxial fiberglass sleeving to length.
 4. **Dry Layup & Bagging:**
    * Apply release film to the mold so the part doesn't stick.
-   * Slide the biaxial sleeves over the mandrel in sequence — 6" sleeve, then 4", then 6" — pulling each layer taut to conform to the taper.
+   * Slide the biaxial sleeves over the mandrel in sequence — 3" sleeve, then 4", then 3" — pulling each layer taut to conform to the taper.
    * Apply peel ply, flow mesh, and spiral tubing for resin feed and vacuum catch.
    * Seal the assembly in a vacuum bag with tacky tape.
    * Pull a full vacuum and check for a leak-free envelope.
