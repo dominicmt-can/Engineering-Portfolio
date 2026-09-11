@@ -72,7 +72,7 @@ A single-stage epicyclic gear reduction modeled in SolidWorks, mathematically pr
 A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and manufactured by vacuum infusion over a 3D-printed mandrel.
 
 <p align="center">
-  <img src="images/Rocket-Nose-Cone.png" alt="Finished Composite Nose Cone" width="80%" />
+  <img src="images/Rocket-Nose-Cone.png" alt="Finished Composite Nose Cone" width="65%" />
 </p>
 
 * **Aerodynamic Surface Modeling:** Designed a 380 mm tangent-ogive profile with a 53 mm base radius in Fusion 360, used as the male mandrel for vacuum infusion.
@@ -93,7 +93,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 1. **Tooling Fabrication:** Print `UBC Rocket Nose Cone Mold.stl` in PETG with a high perimeter count and ~ 30% infill to withstand vacuum pressure.
 
 <p align="center">
-  <img src="images/Rocket-Nose-Cone-Real-Standing.png" alt="Raw composite nose cone post-infusion" width="80%" />
+  <img src="images/Rocket-Nose-Cone-Real-Standing.png" alt="Raw composite nose cone post-infusion" width="65%" />
 </p>
 
 2. **Tooling Post-Processing:** Sand the mold smooth to remove FDM layer lines, apply body filler where needed, buff between coats, and finish with a resin barrier coat for an airtight, non-stick surface.
