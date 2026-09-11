@@ -239,8 +239,7 @@ Composite manufacturing involves both carbon-fiber particulate hazards and chemi
 * **Quantitative Warp Measurement:** Replace the straightedge inspection with a dial indicator or height-gauge measurement across a fixed surface plate.
 * **Formal Laminate Symmetry Review:** Add a mandatory stacking-sequence symmetry check before any new laminate schedule is released for manufacturing.
 * **Cure Temperature Monitoring:** Use thermocouples during cure to record laminate temperature and identify unexpected exothermic behavior.
-* **Fiber Volume Fraction Characterization:** Record laminate mass, thickness, and cured geometry systematically—or use destructive coupon testing—to improve confidence in the estimated fiber volume fraction.
-* **Process Documentation:** Record vacuum decay, resin mass, ambient temperature, infusion time, and wet-out duration for each production run.
+* **Fiber Volume Fraction Characterization:** Record laminate mass, thickness, and cured geometry systematically.
 
 ---
 
