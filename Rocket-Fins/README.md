@@ -5,8 +5,8 @@ A continuous carbon-fiber wrap-around fin for Cloudburst, a 32,000 ft apogee roc
 Unlike bolt-on fins, this geometry relies on structural continuity and epoxy. Each mold produces one continuous piece — a flat fin section, transitioning into a curved wrap section matched to the body tube radius, terminating in another flat section. Adjacent fins are epoxied to one another and curved sections are epoxied to the rocket body, forming a continuous tip-to-tip wrap-around fin-can.
 
 <p align="center">
-	<img src="./Individual_Fins.png" alt="Demolded individual composite fin sections" width="48%" />
-	<img src="./Attached_Fins.png" alt="Integrated composite fin-can" width="48%" />
+	<img src="./Individual_Fins.png" alt="Demolded individual composite fin sections" height="350" />
+	<img src="./Attached_Fins.png" alt="Integrated composite fin-can" height="350" />
 </p>
 
 ---

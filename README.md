@@ -109,3 +109,29 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 **Tools:** Fusion 360, Composites Manufacturing, Vacuum Infusion, FDM 3D Printing, Geometric Sizing Analysis  
 **Files:** [`Rocket-Nose-Cone/`](./Rocket-Nose-Cone/)
+
+---
+
+## 4. Composite Rocket Fin-Can
+
+A continuous carbon-fiber wrap-around fin-can manufactured through vacuum infusion, with a symmetric stacking sequence developed to eliminate cure-induced warping.
+
+<p align="center">
+  <img src="Rocket-Fins/Fin_Infusion.gif" alt="Vacuum infusion process for the composite fin" width="80%" />
+</p>
+
+<div align="center">
+
+<br>
+
+| Demolded Individual Fins | Integrated Composite Fin-Can |
+| :---: | :---: |
+| <img src="Rocket-Fins/Individual_Fins.png" alt="Demolded individual composite fin sections" height="350" /> | <img src="Rocket-Fins/Attached_Fins.png" alt="Integrated composite fin-can" height="350" /> |
+
+</div>
+
+* **Defect Resolution:** Independently diagnosed the asymmetric laminate layup as the cause of a 20 mm cure-induced warp, implemented a symmetric 0°/45° schedule, and verified the follow-up panel cured nearly flat.
+* **Manufacturing:** Designed and manufactured with the UBC Rocket sub-team using quasi-isotropic carbon fabric, vacuum bagging, resin infusion, and post-cure processing.
+
+**Tools:** Composite Manufacturing, Vacuum Infusion, Carbon Fiber Layup, Laminate Analysis<br>
+**Files:** [`Rocket-Fins/`](./Rocket-Fins/)
