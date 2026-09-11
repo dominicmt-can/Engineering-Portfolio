@@ -5,7 +5,7 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 **Project Motivation:** Created as an independent initiative to apply manufacturing and mechatronics principles to a complete build. This project demonstrates end-to-end product development, combining custom SolidWorks CAD, power-integrity debugging, and non-blocking embedded C/C++ control to reliably capture and visualize spatial telemetry.
 
 <p align="center">
-  <img src="images/sonar_demo.gif" alt="Live Sonar Sweep Demo" width="80%" />
+  <img src="../images/sonar_demo.gif" alt="Live Sonar Sweep Demo" width="80%" />
 </p>
 
 <div align="center">
@@ -14,7 +14,7 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 
 | Sonar and Custom Servo Attachment | Assembled Microcontroller Rig |
 | :---: | :---: |
-| <img src="images/Servo_Print_and_Stand.png" height="450" /> | <img src="images/ServoSonarSetup.jpg" height="450" /> |
+| <img src="../images/Servo_Print_and_Stand.png" height="450" /> | <img src="../images/ServoSonarSetup.jpg" height="450" /> |
 
 </div>
 
@@ -51,7 +51,7 @@ A single-axis scanning radar system that pairs an ultrasonic rangefinder with a 
 ## Hardware Interconnect & Breadboard Distribution
 
 <p align="center">
-  <img src="circuits/Circuit_layout.png" alt="Circuit layout" width="60%" />
+  <img src="../images/Circuit_Schematic.png" alt="Circuit layout" width="60%" />
 </p>
 
 > **Schematic Source Files:** Complete KiCad project, symbol tables, and schematic sheets available in [`circuits/`](./circuits/).
@@ -99,7 +99,7 @@ Raw ultrasonic measurements contain isolated range spikes and small measurement 
 A median filter was selected instead of a moving average because isolated outliers were the dominant observed error mode. The median operation rejects a single extreme sample while preserving sudden range transitions more effectively than averaging neighboring values.
 
 <p align="center">
-  <img src="images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
+  <img src="../images/median_filter_plot.png" width="85%" alt="3-Point Median Filter vs Raw Telemetry" />
 </p>
 
 > **Test Data Files:** Raw test data and testing code are available in [`tests/`](./tests/).
@@ -155,7 +155,7 @@ if (currentTime - lastMoveTime >= sweepSpeed) {
     *   *DFAM Considerations:* A 0.2 mm dimensional allowance was applied to relevant mating features to account for FDM dimensional variation. Press-fit interfaces were used for the HC-SR04 housing and servo horn to avoid additional fasteners while preserving simple, easy-to-print geometry.
 
 <p align="center">
-  <img src="images/CAD Assembly.png" alt="CAD Assembly" width="60%" />
+  <img src="../images/Isometric_Assembly.png" alt="CAD Assembly" width="60%" />
 </p>
 
 > **CAD Source Files:** All CAD components and assembly files are available in [`CAD/`](./CAD/).
