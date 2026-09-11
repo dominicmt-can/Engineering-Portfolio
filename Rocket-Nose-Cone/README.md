@@ -2,7 +2,7 @@
 
 A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and manufactured by vacuum infusion over a 3D-printed mandrel, with a station-by-station dimensional schedule to guide the composite layup.
 
-<br>
+**Project Context & Contribution:** Developed as part of the UBC Rocket design team. I completed key portions of the CAD/tooling design and dimensional layup analysis independently, including the station-by-station sizing used to plan the biaxial sleeve schedule. The broader mold preparation, composite layup, vacuum bagging, resin infusion, and manufacturing process were completed collaboratively by our sub-team, with my direct involvement throughout.
 
 <p align="center">
   <img src="../images/Rocket-Nose-Cone.png" alt="Nose Cone Digital Profile" width="80%" />
@@ -12,11 +12,17 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 ---
 
-<p align="center">
-  <img src="../images/Rocket-Nose-Cone-Mold-Disassembled-Iso.png" alt="Disassembled nose cone mold, isometric view" height="360" hspace="8" />
-  <img src="../images/Rocket-Nose-Cone-Mold-Disassembled-Front.png" alt="Disassembled nose cone mold, front view" height="360" hspace="8" />
-  <img src="../images/Rocket-Nose-Cone-Mold.png" alt="Rocket nose cone mold" height="360" hspace="8" />
-</p>
+<div align="center">
+
+<br>
+
+| Disassembled Mold (Isometric) | Disassembled Mold (Front) | Assembled Tooling |
+| :---: | :---: | :---: |
+| <img src="../images/Rocket-Nose-Cone-Mold-Disassembled-Iso.png" height="250" /> | <img src="../images/Rocket-Nose-Cone-Mold-Disassembled-Front.png" height="250" /> | <img src="../images/Rocket-Nose-Cone-Mold.png" height="250" /> |
+
+</div>
+
+---
 
 ## Technical Specifications
 
@@ -67,10 +73,15 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 --- 
 
-<p align="center">
-  <img src="../images/Rocket-Nose-Cone-Real-Standing.png" alt="Finished rocket nose cone standing vertically" height="360" hspace="8" />
-  <img src="../images/Rocket-Nose-Cone-Real-Side.png" alt="Finished rocket nose cone side view" height="360" hspace="8" />
-</p>
+<div align="center">
+
+<br>
+
+| Finished Nose Cone (Standing) | Finished Nose Cone (Side View) |
+| :---: | :---: |
+| <img src="../images/Rocket-Nose-Cone-Real-Standing.png" height="400" /> | <img src="../images/Rocket-Nose-Cone-Real-Side.png" height="400" /> |
+
+</div>
 
 ---
 
