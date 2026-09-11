@@ -62,9 +62,9 @@ A vacuum-infused carbon-fiber wrap-around fin-can developed with the UBC Rocket 
 
 </div>
 
-* **My Contribution — Defect Investigation:** Reviewed the failed laminate schedule and identified asymmetric stacking as the likely source of bending-extension coupling and residual curvature during cool-down from the post-cure.
+* **Individual Contribution — Defect Investigation:** Reviewed the failed laminate schedule and identified asymmetric stacking as the likely source of bending-extension coupling and residual curvature during cool-down from the post-cure.
 * **Layup Redesign:** Revised the 9-ply schedule to use a symmetric alternating 0°/45° reference orientation about the laminate midplane while maintaining the required quasi-isotropic reinforcement architecture.
-* **Verification:** The UBC Rocket composites sub-team manufactured a second test panel using the revised schedule, which cured practically flat compared with the approximately 20 mm out-of-plane deviation observed in the original panel.
+* **Verification:** We manufactured a second test panel using the revised schedule, which cured practically flat compared with the approximately 20 mm out-of-plane deviation observed in the original panel.
 * **Composite Manufacturing:** Supported production using quasi-isotropic carbon fabric, vacuum bagging, resin infusion, post-cure processing, trimming, surface preparation, and structural bonding of the continuous wrap-around fin sections.
 * **Result:** Converted a visibly warped prototype laminate into a nearly flat follow-up panel through root-cause analysis and stacking-sequence redesign.
 
@@ -123,7 +123,7 @@ A tangent-ogive composite nose cone developed with the UBC Rocket design team us
 
 </div>
 
-* **My Contribution:** Developed the infusion mandrel geometry and station-based sizing approach used to plan how the biaxial fiberglass sleeving would conform to the changing ogive circumference.
+* **Individual Contribution:** Developed the infusion mandrel geometry and station-based sizing approach used to plan how the biaxial fiberglass sleeving would conform to the changing ogive circumference.
 * **Aerodynamic Surface Modeling:** Designed a 380 mm tangent-ogive profile with a 53 mm base radius in Fusion 360 for use as the male infusion mandrel.
 * **Station-Based Layup Planning:** Discretized the ogive into 20 mm vertical stations and calculated the required perimeter at each location, tapering from approximately 166.5 mm at the base toward the tip. The schedule was used to guide sleeve sizing and reduce the risk of bunching, bridging, and uneven resin distribution.
 * **DFAM Tooling Design:** Designed the mandrel geometry and print orientation to minimize unsupported overhangs, then adjusted FDM shell and perimeter settings so the PETG tooling could withstand vacuum loading without collapsing.
