@@ -79,33 +79,14 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 <p align="center">
   <img src="images/Rocket-Nose-Cone-Mold-Disassembled-Iso.png" alt="Disassembled nose cone mold, isometric view" height="360" hspace="8" />
-  <img src="images/Rocket-Nose-Cone-Mold.png" alt="Rocket nose cone mold" height="360" hspace="8" />
+  <img src="images/Rocket-Nose-Cone-Real-Standing.png" alt="Real nose cone mold" height="360" hspace="8" />
 </p>
 
 * **Analytical Station Layup Schedule:** Discretized the ogive into 20 mm vertical stations to derive target perimeter reductions (166.5 mm at the base tapering to 0 mm at the tip), preventing localized bunching and resin starvation in the biaxial sleeving.
-* **DFAM Mandrel Engineering:** Tuned FDM perimeter density and shell thickness in Bambu Studio so the mold could withstand full atmospheric vacuum (-101 kPa) without collapsing, then sealed PETG porosity with filler and epoxy barrier coats.
+* **DFAM Mandrel Engineering:** Designed the nose cone mold to require minimal supports by reducing overhangs and steepness wherever possible. Tuned FDM perimeter density and shell thickness in Bambu Studio so the mold could withstand full atmospheric vacuum (-101 kPa) without collapsing, then sealed PETG porosity with filler and epoxy barrier coats.
 * **Resin Infusion Strategy:** Sequenced a graduated biaxial fiberglass sleeve layup (3" → 4" → 3") over a release film covered mandrel, achieving uniform wet-out and clearances that mate cleanly with the primary airframe body tube.
 
 <br>
-  
-**Tooling & Manufacturing Process**
-
-1. **Tooling Fabrication:** Print `UBC Rocket Nose Cone Mold.stl` in PETG with a high perimeter count and ~ 30% infill to withstand vacuum pressure.
-
-<p align="center">
-  <img src="images/Rocket-Nose-Cone-Real-Standing.png" alt="Raw composite nose cone post-infusion" width="65%" />
-</p>
-
-2. **Tooling Post-Processing:** Sand the mold smooth to remove FDM layer lines, apply body filler where needed, buff between coats, and finish with a resin barrier coat for an airtight, non-stick surface.
-3. **Material Prep:** Cut the biaxial fiberglass sleeving to length.
-4. **Dry Layup & Bagging:**
-   * Apply release film to the mold so the part doesn't stick.
-   * Slide the biaxial sleeves over the mandrel in sequence — 3" sleeve, then 4", then 3" — pulling each layer taut to conform to the taper.
-   * Apply peel ply, flow mesh, and spiral tubing for resin feed and vacuum catch.
-   * Seal the assembly in a vacuum bag with tacky tape.
-   * Pull a full vacuum and check for a leak-free envelope.
-5. **Vacuum Infusion:** Mix the epoxy resin system, then open the feed line and let atmospheric pressure drive resin through the fiberglass matrix until fully wetted out.
-6. **Demolding:** Let the part cure fully per the resin datasheet, then remove it from the mold (sliding it off directly if possible, or heating the mold until it releases the part if not).
 
 **Tools:** Fusion 360, Composites Manufacturing, Vacuum Infusion, FDM 3D Printing, Geometric Sizing Analysis  
 **Files:** [`Rocket-Nose-Cone/`](./Rocket-Nose-Cone/)
