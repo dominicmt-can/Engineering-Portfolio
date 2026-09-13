@@ -125,14 +125,15 @@ A tangent-ogive composite nose cone developed with the UBC Rocket design team us
 
 * **Individual Contribution:** Developed the infusion mandrel geometry and station-based sizing approach used to plan how the biaxial fiberglass sleeving would conform to the changing ogive circumference.
 * **Aerodynamic Surface Modeling:** Designed a 380 mm tangent-ogive profile with a 53 mm base radius in Fusion 360 for use as the male infusion mandrel.
-* **Station-Based Layup Planning:** Discretized the 380 mm tangent-ogive into 20 mm axial stations and estimated the combined local thickness of the overlapping fiberglass sleeves at each location. I then offset the mandrel surface inward from the required finished profile according to
-\[
-R_{\mathrm{mandrel}}(x)
-=
-R_{\mathrm{outer}}(x)
--
-t_{\mathrm{laminate}}(x)
-\],
+* **Station-Based Layup Planning:** Discretized the 380 mm tangent-ogive into 20 mm axial stations and estimated the combined local thickness of the overlapping fiberglass sleeves at each location. I then offset the mandrel surface inward from the required finished profile according to:
+
+<div align="center">
+
+<i>R</i><sub>mandrel</sub>(<i>x</i>) =
+<i>R</i><sub>outer</sub>(<i>x</i>) −
+<i>t</i><sub>laminate</sub>(<i>x</i>)
+
+</div>,
 so the added composite thickness would build back outward toward the target nose-cone geometry after infusion and cure.
 * **DFAM Tooling Design:** Designed the mandrel geometry and print orientation to minimize unsupported overhangs, then adjusted FDM shell and perimeter settings so the PETG tooling could withstand vacuum loading without collapsing.
 * **Tooling Preparation:** Post-processed the printed mandrel using filler, sanding, and epoxy barrier coats to reduce surface roughness and seal FDM porosity before infusion.
