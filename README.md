@@ -6,14 +6,14 @@ Hands-on engineering portfolio focused on mechanical design, mechatronics, compo
 
 | Project | Focus |
 | :--- | :--- |
-| **Sonar Sweep** | Embedded systems, mechatronics, telemetry, hardware debugging |
+| **Ultrasonic Scanner** | Embedded systems, mechatronics, telemetry, hardware debugging |
 | **Composite Rocket Fin-Can** | Composite manufacturing, defect investigation, laminate design |
 | **Planetary Gearbox** | Mechanical design, epicyclic kinematics, DFAM |
 | **Rocket Nose Cone** | Composite tooling, vacuum infusion, manufacturing analysis |
 
 ---
 
-## 1. Sonar Sweep — Ultrasonic Radar Scanner
+## 1. Ultrasonic Scanner
 
 A single-axis ultrasonic scanner combining embedded firmware, mechanical design, power-integrity debugging, signal filtering, and a live desktop visualization interface.
 

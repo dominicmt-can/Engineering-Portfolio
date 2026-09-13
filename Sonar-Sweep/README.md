@@ -1,4 +1,4 @@
-# Sonar Sweep — Ultrasonic Radar Scanner
+# Ultrasonic Scanner
 
 A single-axis scanning radar system that pairs an ultrasonic rangefinder with a servo-driven 180° sweep to stream real-time spatial mapping data over USB to a custom desktop GUI.
 
