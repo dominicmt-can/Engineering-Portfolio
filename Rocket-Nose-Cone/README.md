@@ -1,8 +1,8 @@
 # Composite Rocket Nose Cone & Vacuum Infusion Tooling
 
-A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and manufactured by vacuum infusion over a 3D-printed mandrel, with a station-by-station dimensional schedule to guide the composite layup.
+A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and manufactured by vacuum infusion over a 3D-printed PETG mandrel. The tooling geometry incorporated station-by-station laminate-thickness compensation so the cured composite outer surface would match the required tangent-ogive profile.
 
-**Project Context & Contribution:** Developed as part of the UBC Rocket design team. I completed key portions of the CAD/tooling design and dimensional layup analysis independently, including the station-by-station sizing used to plan the biaxial sleeve schedule. The broader mold preparation, composite layup, vacuum bagging, resin infusion, and manufacturing process were completed collaboratively by our sub-team, with my direct involvement throughout.
+**Project Context & Contribution:** Developed as part of the UBC Rocket design team. I independently completed key portions of the CAD/tooling design and developed the station-by-station laminate-thickness compensation used to modify the mandrel geometry for the overlapping fiberglass layup. Mold preparation, composite layup, vacuum bagging, resin infusion, and final manufacturing were completed collaboratively by our sub-team, with my direct involvement throughout.
 
 <p align="center">
   <img src="../images/Rocket-Nose-Cone.png" alt="Nose Cone Digital Profile" width="80%" />
@@ -29,7 +29,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 * **Architecture:** Tangent-ogive nose cone profile (tooling / male mold)
 * **Base Radius:** 53.0 mm
 * **Total Height:** 380.0 mm
-* **Manufacturing Stations:** Sliced into 20 mm height increments for layup accuracy
+* **Analysis Stations:** 20 mm axial increments for laminate-thickness compensation
 * **Material (Tooling):** PETG, printed on a Bambu Lab X1 Carbon
 * **Material (Final Part):** Biaxial fiberglass roving tubing (3" and 4" diameter schedule)
 
@@ -49,27 +49,33 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 ## Key Engineering Challenges & Solutions
 
-### 1. Material Sizing & Biaxial Conformance
-* **Problem:** Sliding tubular composite sleeves over a tapered 3D surface risks bunching at the tip or bridging across the base if sleeve diameter isn't sized correctly at each point along the profile.
-* **Solution:** Built an analytical spreadsheet to slice the 380 mm profile into 20 mm vertical stations, deriving the required fiber width at each — tapering from 166.5 mm at the base to 0 mm at the tip — so the biaxial tubing pulls taut and conforms to the changing circumference without voids.
+### 1. Laminate-Thickness Compensation
 
-> **Layup Data:** Raw analytical data is in [`Rocket data.xlsx`](./Rocket%20data.xlsx).
+- **Problem:** The nose cone was manufactured using three overlapping biaxial fiberglass sleeves. As the sleeves conformed to the changing diameter of the tangent-ogive, the combined laminate buildup varied along the axial length. If the PETG mandrel were modeled directly to the required finished outer profile, the added fiberglass thickness would make the cured nose cone locally oversized.
 
-### 2. Structural Thickness & Sleeve Sequencing
-* **Problem:** The finished airframe needs specific internal and external clearances to mate with the body tube, while keeping enough wall thickness to handle flight loads.
-* **Solution:** Used a layered sleeve schedule — 3" sleeve, then 4", then a final 3" (3" → 4" → 3") — and modeled predicted wall thickness analytically before infusion to confirm the cured part would follow the ogive profile within tolerance.
+- **Solution:** Divided the 380 mm tangent-ogive into 20 mm axial stations and estimated the combined local laminate thickness of the overlapping fiberglass sleeves at each location. The mandrel radius was then offset inward according to:
 
-### 3. Tooling Design for Vacuum Infusion (DFAM)
-* **Problem:** FDM-printed tooling can leak through porous printed layers under vacuum, and hollow printed structures can crush under atmospheric pressure.
-* **Solution:** Adjusted slicer profiles for thicker walls and denser infill to resist crushing under full vacuum, then sealed the mold to achieve a fully airtight envelope for resin infusion.
+  $$R_{\text{mandrel}}(x)=R_{\text{outer}}(x)-t_{\text{laminate}}(x)$$
+
+  where $R_{\text{outer}}(x)$ is the required finished nose-cone radius and $t_{\text{laminate}}(x)$ is the predicted local composite thickness. This produced a compensated tooling profile intended to build back outward toward the required tangent-ogive geometry after layup and cure.
+
+> **Analysis Data:** Station-by-station tooling calculations are available in [`Rocket data.xlsx`](./Rocket%20data.xlsx).
+
+
+### 2. Tooling Design for Vacuum Infusion (DFAM)
+
+- **Problem:** FDM-printed tooling can leak through inter-layer porosity under vacuum, while insufficiently supported printed structures can deform under atmospheric pressure during vacuum infusion.
+
+- **Solution:** Designed the segmented PETG tooling for manufacturability and adjusted print settings to provide sufficient wall thickness and internal support for vacuum loading. The printed surfaces were then filled, sanded, and sealed with epoxy barrier coats to reduce porosity and improve the composite surface finish.
 
 ---
 
-## Technical Documentation & Empirical Validation
+## Technical Documentation & Validation
 
-* **Analytical Sizing List:** Station-by-station dimensional list specifying exact sleeving dimensions and stretch requirements.
-* **Clearance Validation:** Verified structural thickness calculations against the mating body tube's internal diameter for a slip-fit without excessive sanding or machining.
-* **Vacuum Integrity & Surface Prep:** Post-processed the PETG mold (progressive-grit sanding, body filler, multiple resin coats) to remove FDM layer lines, seal porosity, and produce a smooth finish on the demolded part.
+- **Laminate-Compensation Schedule:** Developed a station-by-station analysis relating the required finished outer radius, predicted local laminate buildup, and compensated mandrel radius at 20 mm axial intervals.
+- **Airframe Interface:** Checked the tooling and predicted composite geometry against the required nose-cone/base interface dimensions before manufacturing.
+- **Manufacturing Validation:** Successfully manufactured the fiberglass nose cone over the compensated PETG tooling and verified that the finished component achieved the required overall profile and airframe-interface fit.
+- **Vacuum Integrity & Surface Preparation:** Post-processed the PETG mandrel using filler, progressive sanding, and epoxy barrier coats to reduce FDM surface roughness and seal print porosity prior to infusion.
 
 --- 
 
@@ -92,7 +98,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 3. **Material Prep:** Cut the biaxial fiberglass sleeving to length.
 4. **Dry Layup & Bagging:**
    * Apply release film to the mold so the part doesn't stick.
-   * Slide the biaxial sleeves over the mandrel in sequence — 3" sleeve, then 4", then 3" — pulling each layer taut to conform to the taper.
+   * Install the biaxial fiberglass sleeves over the compensated mandrel in the 3" → 4" → 3" sequence, conforming each layer to the tangent-ogive surface.
    * Apply peel ply, flow mesh, and spiral tubing for resin feed and vacuum catch.
    * Seal the assembly in a vacuum bag with tacky tape.
    * Pull a full vacuum and check for a leak-free envelope.
@@ -103,9 +109,10 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 ## Future Improvements
 
-* **Multi-Part Split Mold:** Move to a bolted two-piece split mold with indexing pins and integrated O-ring grooves to simplify sealing.
-* **FEA Aerodynamic Simulation:** Run CFD/FEA to map pressure distribution and aerodynamic heating along the profile at Mach 1+.
-* **Heated Cure Cycle:** Add an Arduino-controlled heated curing blanket to raise the resin's glass transition temperature (Tg) and improve airframe rigidity.
+- **Split Tooling Architecture:** Develop a multi-piece split mold or mandrel with positive indexing features to simplify demolding and improve repeatability between manufactured parts.
+- **Dimensional Validation:** Measure the cured nose-cone profile at the same axial stations used in the tooling analysis and compare the measured radii against the predicted finished geometry.
+- **Refined Laminate Model:** Replace the initial thickness estimates with measured cured-ply thickness data from representative infused specimens to improve the accuracy of the mandrel compensation model.
+- **Controlled Cure Cycle:** Evaluate a controlled post-cure cycle in accordance with the resin manufacturer's recommendations to improve cure consistency and thermal performance.
 
 ---
 
@@ -113,7 +120,7 @@ A tangent-ogive nose cone for UBC Rocket's airframe, designed in Fusion 360 and 
 
 [**Rocket-Nose-Cone/**](./)<br>
 ├── [`README.md`](./README.md) — This documentation file<br>
-├── [`Rocket data.xlsx`](./Rocket%20data.xlsx) — Station slicing and dimensional sizing data<br>
+├── [`Rocket data.xlsx`](./Rocket%20data.xlsx) — Station-based laminate-thickness and mandrel-compensation analysis<br>
 └── [**CAD/**](./CAD/)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;├── [`UBC Rocket Nose Cone Mold.f3d`](./CAD/UBC%20Rocket%20Nose%20Cone%20Mold.f3d) — Native Fusion 360 master CAD model<br>
 &nbsp;&nbsp;&nbsp;&nbsp;├── [`UBC Rocket Nose Cone Mold - lower.f3d`](./CAD/UBC%20Rocket%20Nose%20Cone%20Mold%20-%20lower.f3d) — Lower mold section<br>
