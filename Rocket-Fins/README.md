@@ -91,7 +91,7 @@ This provided practical confirmation that the stacking-sequence revision address
 
 ## Representative Laminate Testing & Validation
 
-To supplement the team-provided flutter analysis with physical material data, our sub-team manufactured a flat 9-ply carbon-fiber specimen representative of one fin-face laminates and tested it under ASTM D3039 axial tension.
+To supplement the team-provided flutter analysis with physical material data, our sub-team manufactured a flat 9-ply carbon-fiber specimen representative of one fin-face laminate and tested it under ASTM D3039 axial tension.
 
 ### Tensile Test Results
 
