@@ -40,7 +40,7 @@ A single-axis ultrasonic scanner combining embedded firmware, mechanical design,
 
 **Tools:** Arduino C/C++, Processing / Java, SolidWorks, KiCad, Bambu Studio  
 **Engineering Areas:** Embedded systems, serial communication, signal filtering, power-integrity debugging, DFAM, system integration  
-**Files:** [`Sonar-Sweep/`](./Sonar-Sweep/)
+**Files:** [`Ultrasonic-Scanner/`](./Sonar-Sweep/)
 
 ---
 
