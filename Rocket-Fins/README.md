@@ -30,7 +30,7 @@ Unlike conventional bolt-on fins, each molded section forms one continuous compo
   * Root chord: 30.00 cm
   * Tip chord: 3.55 cm
   * Span: 10.00 cm
-  * Nominal thickness: 0.65 cm
+  * Assembled fin thickness: 0.65 cm
 * **Estimated Fiber Volume Fraction:** Approximately 50%
 
 The fiber volume fraction was estimated analytically using the finished laminate geometry, ply count, reinforcement areal weight, and material density. It should therefore be treated as an engineering estimate rather than a direct material-characterization measurement.
@@ -91,7 +91,7 @@ This provided practical confirmation that the stacking-sequence revision address
 
 ## Representative Laminate Testing & Validation
 
-To supplement the team-provided flutter analysis with physical material data, our sub-team manufactured a **flat 9-ply carbon-fiber specimen representative of the laminate used in the flat portion of the fin** and tested it under **ASTM D3039 axial tension**.
+To supplement the team-provided flutter analysis with physical material data, our sub-team manufactured a flat 9-ply carbon-fiber specimen representative of one fin-face laminates and tested it under ASTM D3039 axial tension.
 
 ### Tensile Test Results
 
